@@ -1,0 +1,95 @@
+@import "vars.scss";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 1150px;
+
+  margin: 0 auto;
+}
+header {
+  nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 70px;
+    h1 {
+      font-family: $spotify-font;
+      color: $main-color;
+      margin-left: -3px;
+    }
+
+    img {
+      height: 40px;
+      width: fit-content;
+      left: 0px;
+      position: sticky;
+      margin-right: 5px;
+      font-family: 16px;
+    }
+  }
+  .compare-bar {
+    width: 100vw;
+    background-color: $compare-bar-background;
+    // margin-bottom: 190px;
+    left: 0px;
+    position: absolute;
+    -webkit-box-shadow: 1px 5px 5px 0px rgba(44, 44, 44, 0.1);
+    -moz-box-shadow: 1px 5px 5px 0px rgba(44, 44, 44, 0.1);
+    box-shadow: 1px 5px 5px 0px rgba(44, 44, 44, 0.1);
+
+    .container {
+      width: 1150px;
+      min-height: 60px;
+      margin: 0 auto;
+      display: flex;
+
+      .compare-item-card {
+        min-width: 80px;
+        height: 30px;
+
+        margin: auto 10px;
+        display: flex;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        background-color: $main-color;
+        color: $compare-bar-background;
+        p {
+          margin: auto 9px;
+        }
+        span {
+          margin: 2px 8px 2px 6px;
+          cursor: pointer;
+        }
+      }
+      .add-more-btn {
+        @extend .compare-item-card;
+        background-color: $compare-bar-background;
+        color: $main-color;
+        border: 1px solid $main-color;
+        span {
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+}
+
+#scene {
+  padding-top: 50px;
+}
+
+// buttons
+.compare-btn {
+  width: 90px;
+  height: 30px;
+  margin: auto 1px auto auto;
+  border-radius: 15px;
+  border: $border;
+  cursor: pointer;
+  color: $main-color;
+  background-color: rgb(48, 48, 48);
+}
