@@ -9,6 +9,10 @@ body {
   margin: 0 auto;
 }
 
+main {
+  padding-top: 80px;
+}
+
 header nav {
   display: flex;
   justify-content: flex-start;
@@ -37,13 +41,13 @@ header .compare-bar {
   -moz-box-shadow: 1px 5px 5px 0px rgba(44, 44, 44, 0.1);
   box-shadow: 1px 5px 5px 0px rgba(44, 44, 44, 0.1);
 }
-header .compare-bar .container {
+header .compare-bar .compare-container {
   width: 1150px;
   min-height: 60px;
   margin: 0 auto;
   display: flex;
 }
-header .compare-bar .container .compare-item-card, header .compare-bar .container .add-more-btn {
+header .compare-bar .compare-container .compare-item-card, header .compare-bar .compare-container .add-more-btn {
   min-width: 80px;
   height: 30px;
   margin: auto 10px;
@@ -53,24 +57,24 @@ header .compare-bar .container .compare-item-card, header .compare-bar .containe
   background-color: #1db954;
   color: #48494c;
 }
-header .compare-bar .container .compare-item-card p, header .compare-bar .container .add-more-btn p {
+header .compare-bar .compare-container .compare-item-card p, header .compare-bar .compare-container .add-more-btn p {
   margin: auto 9px;
 }
-header .compare-bar .container .compare-item-card span, header .compare-bar .container .add-more-btn span {
+header .compare-bar .compare-container .compare-item-card span, header .compare-bar .compare-container .add-more-btn span {
   margin: 2px 8px 2px 6px;
   cursor: pointer;
 }
-header .compare-bar .container .add-more-btn {
+header .compare-bar .compare-container .add-more-btn {
   background-color: #48494c;
   color: #1db954;
   border: 1px solid #1db954;
 }
-header .compare-bar .container .add-more-btn span {
+header .compare-bar .compare-container .add-more-btn span {
   transform: rotate(45deg);
 }
 
-#scene {
-  padding-top: 50px;
+.card-container {
+  display: flex;
 }
 
 .compare-btn {

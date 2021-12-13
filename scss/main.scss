@@ -10,6 +10,9 @@ body {
 
   margin: 0 auto;
 }
+main {
+  padding-top: 80px;
+}
 header {
   nav {
     display: flex;
@@ -41,7 +44,7 @@ header {
     -moz-box-shadow: 1px 5px 5px 0px rgba(44, 44, 44, 0.1);
     box-shadow: 1px 5px 5px 0px rgba(44, 44, 44, 0.1);
 
-    .container {
+    .compare-container {
       width: 1150px;
       min-height: 60px;
       margin: 0 auto;
@@ -50,7 +53,6 @@ header {
       .compare-item-card {
         min-width: 80px;
         height: 30px;
-
         margin: auto 10px;
         display: flex;
         font-family: Arial, Helvetica, sans-serif;
@@ -73,15 +75,21 @@ header {
         span {
           transform: rotate(45deg);
         }
+        .btn-to-search {
+          width: 200px;
+          background-color: red !important;
+        }
       }
     }
   }
 }
 
-#scene {
-  padding-top: 50px;
-}
+// #scene {
+// }
 
+.card-container {
+  display: flex;
+}
 // buttons
 .compare-btn {
   width: 90px;
