@@ -68,6 +68,7 @@ header .compare-bar .compare-container .add-more-btn, header .compare-bar .compa
   background-color: #48494c;
   color: #1db954;
   border: 1px solid #1db954;
+  cursor: pointer;
 }
 header .compare-bar .compare-container .add-more-btn span, header .compare-bar .compare-container .search-container span {
   transform: rotate(45deg);
@@ -89,7 +90,7 @@ header .compare-bar .compare-container .search-container {
   transition: 0.5s;
   transform: rotate(0deg) !important;
   color: #48494c;
-  animation: searchXRotate 3s forwards;
+  animation: searchXRotate 1s forwards;
 }
 
 .card-container {
