@@ -19,27 +19,57 @@ getData()
 
 // Append selected card to the compare bar....2xvan
 const addToCompare = () => {
-    document.querySelector(".compare-bar").classList.add("btn-to-search")
     let btn = document.querySelector(".add-more-btn")
-    btn.classList.remove("compare-bar")
 
+    btn.addEventListener('click', () => {
+        console.log("df");
+        // document.querySelector(".card-container").appendChild(newCard)
+        // document.querySelector(".add-more-btn").classList.add("btn-to-search")
 
+        // Append selected card to the compare bar
+        let newCard = document.createElement("div")
+        newCard.innerHTML = "<p>krubi</p>"
+        let krubi = "krubi"
+        newCard.classList.add("compare-item-card")
+        newCard.innerHTML = `<p>${krubi}</p> <span>&#10005;</span>`
+        document.querySelector(".card-container").appendChild(newCard)
+    })
+    // btn.classList.remove("compare-bar")
     // btn.style.width = "230px"
-
-    // Append selected card to the compare bar
-    // let newCard = document.createElement("div")
-    // newCard.innerHTML = "<p>krubi</p>"
-    // let krubi = "krubi"
-    // newCard.classList.add("compare-item-card")
-    // newCard.innerHTML = `<p>${krubi}</p> <span>&#10005;</span>`
-
-    // document.querySelector(".card-container").appendChild(newCard)
 }
+
+// addToCompare()
+
+
+let tranformToSearch = () => {
+
+    let newItem = document.createElement("div")
+    newItem.classList.add("search-container")
+    newItem.style.backgroundColor = "rgb(209, 209, 209)"
+    newItem.innerHTML = `<input placeholder="Search" class="search-input"><span onclick="closeSearch" class="spanom">&#10005;</span>`
+    let oldItem = document.querySelector(".add-more-btn")
+    setTimeout(() => {
+        document.querySelector(".search-input").focus()
+    }, 10);
+    document.querySelector(".compare-container").replaceChild(newItem, oldItem)
+    search()
+}
+
+const closeSearch = () => {
+    let newItem = document.createElement("div")
+    newItem.classList.add("add-more-btn")
+    newItem.innerHTML = ` <p>add more</p> <span>&#10005;</span>`
+    let oldItem = document.querySelector("search-container")
+    document.querySelector(".compare-container").replaceChild(newItem, oldItem)
+}
+
+
+
 
 let Append = (wholeDataBase) => {
     let htmlTemlate = ""
     for (let iterator of wholeDataBase) {
-        htmlTemlate += `<h1 onclick="appendThis(this)">${iterator.id}</h1>`
+        htmlTemlate += `<h1 onclick="appendThis(this)">${iterator.artist}</h1>`
 
     }
     document.querySelector("#scene").innerHTML = htmlTemlate;
@@ -51,22 +81,20 @@ let Append = (wholeDataBase) => {
 let appendThis = (wholeDataBase) => {
     let htmlTemlate = ""
     for (let iterator of wholeDataBase) {
-        htmlTemlate += `<h1 onclick="appendThis(this)">${iterator.id}</h1>`
-        console.log(iterator.id);
+        htmlTemlate += `<h1 onclick="appendThis(this)">${iterator.artist}</h1>`
+        console.log(iterator.artist);
     }
     document.querySelector("#scene").innerHTML = htmlTemlate;
 }
 
 // search in for artist,albums etc in the database
 const search = () => {
-    const inputfield = document.querySelector("#search-input")
+    const inputfield = document.querySelector(".search-input")
     inputfield.addEventListener("keyup", () => {
-
         let filteredResults = [];
         for (const iti of dataStorage) {
-            let artistID = iti.id.toLowerCase();
+            let artistID = iti.artist.toLowerCase();
             //   let carBrand = iti.initials.brand.toLowerCase();
-
             if (artistID.includes(inputfield.value.toLowerCase())) {
                 filteredResults.push(iti);
             }
@@ -74,7 +102,6 @@ const search = () => {
             //   {
             //     filteredResults.push(iti);
             //   }
-
         }
 
         console.log(inputfield.value);
@@ -82,7 +109,7 @@ const search = () => {
     })
 
 }
-search()
+
 
 
 

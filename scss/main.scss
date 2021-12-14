@@ -75,13 +75,28 @@ header {
         span {
           transform: rotate(45deg);
         }
-        .btn-to-search {
-          width: 200px;
-          background-color: red !important;
-        }
+      }
+      .search-container {
+        @extend .add-more-btn;
+        animation: searchExpand;
       }
     }
   }
+}
+.search-input {
+  width: 200px;
+  background-color: rgb(209, 209, 209);
+  border: none;
+  outline: none;
+  padding-left: 8px;
+  animation: searchExpand 1s forwards;
+}
+.spanom {
+  // background-color: white;
+  transition: 0.5s;
+  transform: rotate(0deg) !important;
+  color: $compare-bar-background;
+  animation: searchXRotate 3s forwards;
 }
 
 // #scene {
@@ -100,4 +115,23 @@ header {
   cursor: pointer;
   color: $main-color;
   background-color: rgb(48, 48, 48);
+}
+
+@keyframes searchExpand {
+  0% {
+    width: 119px;
+  }
+  100% {
+    width: 400px;
+  }
+}
+@keyframes searchXRotate {
+  0% {
+    transform: rotate(0deg);
+    // color: $main-color;
+  }
+  100% {
+    transform: rotate(90deg);
+    // color: $compare-bar-background;
+  }
 }
