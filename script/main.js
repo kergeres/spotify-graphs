@@ -7,41 +7,84 @@ let dataStorage = []
 const getData = async () => {
     const response = await fetch(url)
     const data = await response.json()
-    console.log(data);
     Append(data)
+    // save to global var
     dataStorage = data;
 }
 getData()
 
-
-
-
-
 // Append selected card to the compare bar....2xvan
-const addToCompare = () => {
-    let btn = document.querySelector(".add-more-btn")
+const addToCompare = (nameIn) => {
 
-    btn.addEventListener('click', () => {
-        console.log("df");
-        // document.querySelector(".card-container").appendChild(newCard)
-        // document.querySelector(".add-more-btn").classList.add("btn-to-search")
-
-        // Append selected card to the compare bar
+    // Append selected card to the compare bar
+    let barValues = localStorage.getItem("todos") != null ? localStorage.getItem("todos") : [];
+    if (!barValues.includes(nameIn.innerHTML)) {
         let newCard = document.createElement("div")
-        newCard.innerHTML = "<p>krubi</p>"
-        let krubi = "krubi"
         newCard.classList.add("compare-item-card")
-        newCard.innerHTML = `<p>${krubi}</p> <span>&#10005;</span>`
+        newCard.innerHTML = `<p>${nameIn.innerHTML}</p> <span onclick="deleteFromCompare(this)" class="compareCardDeleteBtn">&#10005;</span>`;
+        saveToLocalStorage(nameIn.innerHTML);
         document.querySelector(".card-container").appendChild(newCard)
-    })
+    }
+
 
 }
 
-// addToCompare()
+// Delete cars from the compare par by click on X
+const deleteFromCompare = (e) => {
+    e.parentElement.remove()
+    deleteFromLocalstorage(e.parentElement)
+}
+
+const deleteFromLocalstorage = (todo) => {
+    let todos;
+    if (localStorage.getItem('todos') === null) {
+        todos = []
+    }
+    else {
+        todos = JSON.parse(localStorage.getItem('todos'))
+    }
+    let itemToRemoveIndex = todo.children[0].innerText;
+    console.log(todos);
+    todos.splice(todos.indexOf(itemToRemoveIndex), 1);
+    localStorage.setItem('todos', JSON.stringify(todos))
+}
 
 
+// save selected artists/albums etc to local storage 
+const saveToLocalStorage = (todo) => {
+    let todos;
+    if (localStorage.getItem('todos') === null) {
+        todos = []
+    }
+    else {
+        todos = JSON.parse(localStorage.getItem('todos'))
+    }
+    todos.push(todo)
+    localStorage.setItem('todos', JSON.stringify(todos))
+}
+// get and append the locasstorage values (saved artists/albums etc) to the DOM 
+const getFromLocalStorage = () => {
+    let todos;
+    if (localStorage.getItem('todos') === null) {
+        todos = []
+    }
+    else {
+        todos = JSON.parse(localStorage.getItem('todos'))
+    }
+    console.log(todos);
+    for (const iti of todos) {
+        let newCard = document.createElement("div")
+        newCard.classList.add("compare-item-card")
+        newCard.innerHTML = `<p>${iti}</p> <span onclick="deleteFromCompare(this)" class="compareCardDeleteBtn">&#10005;</span>`;
+        document.querySelector(".card-container").appendChild(newCard)
+
+    }
+}
+getFromLocalStorage()
+
+
+// animation to searchbar to appear
 let tranformToSearch = () => {
-
     document.querySelector(".add-more-btn").addEventListener('click', () => {
         let newItem = document.createElement("div")
         newItem.classList.add("search-container")
@@ -50,7 +93,6 @@ let tranformToSearch = () => {
         let oldItem = document.querySelector(".add-more-btn")
         setTimeout(() => {
             document.querySelector(".search-input").focus()
-
         }, 10);
         document.querySelector(".compare-container").replaceChild(newItem, oldItem)
         search()
@@ -59,6 +101,7 @@ let tranformToSearch = () => {
 }
 tranformToSearch()
 
+// animation to searchbar to disappear
 let closeSearch = () => {
     document.querySelector(".spanom").addEventListener("click", () => {
         let oldItem = document.querySelector(".search-container")
@@ -77,7 +120,7 @@ let closeSearch = () => {
 let Append = (wholeDataBase) => {
     let htmlTemlate = ""
     for (let iterator of wholeDataBase) {
-        htmlTemlate += `<h1 onclick="appendThis(this)">${iterator.artist}</h1>`
+        htmlTemlate += `<h1 onclick="addToCompare(this)">${iterator.artist}</h1>`
 
     }
     document.querySelector("#scene").innerHTML = htmlTemlate;
@@ -86,9 +129,9 @@ let Append = (wholeDataBase) => {
 
 
 // HERE
-let appendThis = (wholeDataBase) => {
+let appendSerch = (filtered) => {
     let htmlTemlate = ""
-    for (let iterator of wholeDataBase) {
+    for (let iterator of filtered) {
         htmlTemlate += `<h1 onclick="appendThis(this)">${iterator.artist}</h1>`
         console.log(iterator.artist);
     }
@@ -100,7 +143,9 @@ const search = () => {
     const inputfield = document.querySelector(".search-input")
     inputfield.addEventListener("keyup", () => {
         let filteredResults = [];
+        // go through the og database and check if the input matches de database
         for (const iti of dataStorage) {
+            // convert to lowercase and no special characters 
             let artistID = iti.artist.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
             //   let carBrand = iti.initials.brand.toLowerCase();
             if (artistID.includes(inputfield.value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''))) {

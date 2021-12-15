@@ -90,14 +90,14 @@ header {
   border: none;
   outline: none;
   padding-left: 8px;
-  animation: searchExpand 1s forwards;
+  animation: searchExpand 0.5s forwards;
 }
 .spanom {
   // background-color: white;
   transition: 0.5s;
   transform: rotate(0deg) !important;
   color: $compare-bar-background;
-  animation: searchXRotate 1s forwards;
+  animation: searchXRotate 0.5s forwards;
 }
 
 // #scene {

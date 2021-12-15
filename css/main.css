@@ -83,14 +83,14 @@ header .compare-bar .compare-container .search-container {
   border: none;
   outline: none;
   padding-left: 8px;
-  animation: searchExpand 1s forwards;
+  animation: searchExpand 0.5s forwards;
 }
 
 .spanom {
   transition: 0.5s;
   transform: rotate(0deg) !important;
   color: #48494c;
-  animation: searchXRotate 1s forwards;
+  animation: searchXRotate 0.5s forwards;
 }
 
 .card-container {
