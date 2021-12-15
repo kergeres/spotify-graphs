@@ -35,7 +35,7 @@ header {
     }
   }
   .compare-bar {
-    width: 100vw;
+    width: 100%;
     background-color: $compare-bar-background;
     // margin-bottom: 190px;
     left: 0px;
@@ -79,7 +79,7 @@ header {
       }
       .search-container {
         @extend .add-more-btn;
-        animation: searchExpand;
+        border: none;
       }
     }
   }
@@ -93,29 +93,84 @@ header {
   animation: searchExpand 0.5s forwards;
 }
 .spanom {
-  // background-color: white;
   transition: 0.5s;
   transform: rotate(0deg) !important;
   color: $compare-bar-background;
   animation: searchXRotate 0.5s forwards;
+  margin-right: 100px;
+  padding-right: 19px;
 }
+.search-table {
+  border-collapse: collapse;
+  font-weight: 400px;
+  padding-right: 30px;
 
-// #scene {
-// }
+  thead {
+    tr:first-child {
+      background-color: unset !important;
+    }
+  }
+  td:nth-child(odd) {
+    //  szöveg bal margoja
+    padding-left: 7px;
+  }
+  td:nth-child(even) {
+    display: flex;
+    justify-content: center;
+    width: 20px;
+    height: 30px;
+    padding-top: 5px;
+    padding-right: 20px;
+    margin: auto auto;
+  }
+
+  tr {
+    height: 30px;
+  }
+
+  table:hoover {
+    color: red;
+    background-color: red;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  tr:nth-child(odd) {
+    background-color: #e7e6e6;
+  }
+}
+.fa-plus-square {
+  margin: 0 auto;
+  color: rgb(71, 71, 71);
+  font-size: 20px;
+  &:hoover {
+    color: red;
+    background-color: red;
+  }
+}
 
 .card-container {
   display: flex;
 }
-// buttons
+
 .compare-btn {
   width: 90px;
   height: 30px;
-  margin: auto 1px auto auto;
+  margin: auto 50px auto auto;
   border-radius: 15px;
   border: $border;
   cursor: pointer;
   color: $main-color;
   background-color: rgb(48, 48, 48);
+}
+
+// main
+
+#scene {
+  width: 700px;
+  border: $border;
+  margin: 40px auto 110px auto;
 }
 
 @keyframes searchExpand {

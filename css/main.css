@@ -33,7 +33,7 @@ header nav img {
   font-family: 16px;
 }
 header .compare-bar {
-  width: 100vw;
+  width: 100%;
   background-color: #48494c;
   left: 0px;
   position: absolute;
@@ -74,7 +74,7 @@ header .compare-bar .compare-container .add-more-btn span, header .compare-bar .
   transform: rotate(45deg);
 }
 header .compare-bar .compare-container .search-container {
-  animation: searchExpand;
+  border: none;
 }
 
 .search-input {
@@ -91,6 +91,52 @@ header .compare-bar .compare-container .search-container {
   transform: rotate(0deg) !important;
   color: #48494c;
   animation: searchXRotate 0.5s forwards;
+  margin-right: 100px;
+  padding-right: 19px;
+}
+
+.search-table {
+  border-collapse: collapse;
+  font-weight: 400px;
+  padding-right: 30px;
+}
+.search-table thead tr:first-child {
+  background-color: unset !important;
+}
+.search-table td:nth-child(odd) {
+  padding-left: 7px;
+}
+.search-table td:nth-child(even) {
+  display: flex;
+  justify-content: center;
+  width: 20px;
+  height: 30px;
+  padding-top: 5px;
+  padding-right: 20px;
+  margin: auto auto;
+}
+.search-table tr {
+  height: 30px;
+}
+.search-table table:hoover {
+  color: red;
+  background-color: red;
+}
+.search-table tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.search-table tr:nth-child(odd) {
+  background-color: #e7e6e6;
+}
+
+.fa-plus-square {
+  margin: 0 auto;
+  color: #474747;
+  font-size: 20px;
+}
+.fa-plus-square:hoover {
+  color: red;
+  background-color: red;
 }
 
 .card-container {
@@ -100,12 +146,18 @@ header .compare-bar .compare-container .search-container {
 .compare-btn {
   width: 90px;
   height: 30px;
-  margin: auto 1px auto auto;
+  margin: auto 50px auto auto;
   border-radius: 15px;
   border: 1px solid black;
   cursor: pointer;
   color: #1db954;
   background-color: #303030;
+}
+
+#scene {
+  width: 700px;
+  border: 1px solid black;
+  margin: 40px auto 110px auto;
 }
 
 @keyframes searchExpand {

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="icons/Spotify_Icon_RGB_Green.png">
+    <script src="https://kit.fontawesome.com/cf79351772.js" crossorigin="anonymous"></script>
     <title>Spotify Graphs</title>
 </head>
 
@@ -20,25 +21,25 @@
         <div class="compare-bar">
             <div class="compare-container">
                 <div class="card-container">
-                    <div class="compare-item-card">
-                        <p>ivan and the parazol</p>
-                        <span onclick="deleteFromCompare(this)" class="compareCardDeleteBtn">&#10005;</span>
-                    </div>
+
                 </div>
 
                 <div class="add-more-btn">
                     <p>add more</p>
                     <span>&#10005;</span>
                 </div>
-                <button class="compare-btn">compare</button>
+                <button onclick="compare()" class="compare-btn">compare</button>
             </div>
         </div>
 
     </header>
     <main>
-        <div id="scene"></div>
+        <div id="scene"><canvas id="graph-container"></canvas></div>
+
     </main>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
     <script src="script/main.js"></script>
 </body>
