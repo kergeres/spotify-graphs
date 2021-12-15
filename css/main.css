@@ -118,15 +118,17 @@ header .compare-bar .compare-container .search-container {
 .search-table tr {
   height: 30px;
 }
-.search-table table:hoover {
-  color: red;
-  background-color: red;
-}
 .search-table tr:nth-child(even) {
   background-color: #dddddd;
 }
+.search-table tr:nth-child(even):hover .fa-plus-square {
+  color: #7a7a7a;
+}
 .search-table tr:nth-child(odd) {
   background-color: #e7e6e6;
+}
+.search-table tr:nth-child(odd):hover .fa-plus-square {
+  color: #7a7a7a;
 }
 
 .fa-plus-square {
@@ -134,9 +136,8 @@ header .compare-bar .compare-container .search-container {
   color: #474747;
   font-size: 20px;
 }
-.fa-plus-square:hoover {
-  color: red;
-  background-color: red;
+.fa-plus-square:hover {
+  color: #7a7a7a;
 }
 
 .card-container {

@@ -18,7 +18,6 @@ const addToCompare = (nameIn) => {
 
     // Append selected card to the compare bar
     let barValues = sessionStorage.getItem("toCompare") != null ? sessionStorage.getItem("toCompare") : [];
-
     console.log(nameIn.parentElement.children[0].innerHTML);
     if (!barValues.includes(nameIn.parentElement.children[0].innerHTML)) {
         let newCard = document.createElement("div")
@@ -153,7 +152,7 @@ let appendSerch = (filtered) => {
     for (let iterator of filtered) {
         htmlTemlate += `
                 <tr>
-                    <td>${iterator.artist}</td>
+                    <td onclick="addToCompare(this)" >${iterator.artist}</td>
                     <td onclick="addToCompare(this)" ><i  class="far fa-plus-square"></i></td>
                 </tr>`
     }
@@ -178,8 +177,14 @@ const search = () => {
             //     filteredResults.push(iti);
             //   }
         }
+        if (inputfield.value != "") {
+            appendSerch(filteredResults)
+        }
+        else {
+            appendSerch("")
+        }
 
-        appendSerch(filteredResults)
+
     })
 
     closeSearch()
@@ -198,30 +203,26 @@ const search = () => {
 let compare = () => {
 
     let sStorage = sessionStorage.getItem("toCompare")
-    console.log(sStorage);
     const ctx = document.getElementById('graph-container').getContext('2d');
     const myChart = new Chart(ctx, {
         type: 'line',
         data: {
             labels: sStorage,
             datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
+                label: sStorage,
+                data: [12, 19, 3, 5],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
                     'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
+                    'rgba(75, 192, 192, 0.2)'
+
                 ],
                 borderColor: [
                     'rgba(255, 99, 132, 1)',
                     'rgba(54, 162, 235, 1)',
                     'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
+                    'rgba(75, 192, 192, 1)'
                 ],
                 borderWidth: 1
             }]

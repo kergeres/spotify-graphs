@@ -128,25 +128,25 @@ header {
     height: 30px;
   }
 
-  table:hoover {
-    color: red;
-    background-color: red;
-  }
-
   tr:nth-child(even) {
     background-color: #dddddd;
+    &:hover .fa-plus-square {
+      color: lighten(rgb(71, 71, 71), 20%);
+    }
   }
   tr:nth-child(odd) {
     background-color: #e7e6e6;
+    &:hover .fa-plus-square {
+      color: lighten(rgb(71, 71, 71), 20%);
+    }
   }
 }
 .fa-plus-square {
   margin: 0 auto;
   color: rgb(71, 71, 71);
   font-size: 20px;
-  &:hoover {
-    color: red;
-    background-color: red;
+  &:hover {
+    color: lighten(rgb(71, 71, 71), 20%);
   }
 }
 
