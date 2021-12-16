@@ -210,44 +210,75 @@ const search = () => {
 
 const compare = () => {
     let selectedItems = sessionStorage.getItem("toCompare")
-    let selectedItemss = JSON.parse(selectedItems)
 
+    let selectedItemsInString = JSON.parse(selectedItems)
+    // console.log(selectedItemsInString.length);
     let xs_labels = []
     let ys = [80, 90, 100, 110, 120]
     let labels = []
 
+    let artist_1
+    let artist_2
+    let artist_3
+
+    let artistall = []
+
     for (let i of dataStorage) {
 
-        for (let k of selectedItemss) {
+        for (let k of selectedItemsInString) {
 
             if (i.artist == k) {
-                console.log(i.id);
+                // if (artist_1 == null) {
+                //     artist_1 = i;
+                //     console.log(artist_1);
+                // }
+                // else if (artist_2 == null) {
+                //     artist_2 = i
+                //     console.log(artist_2);
+                // }
+                // else if (artist_3 == null) {
+                //     artist_3 = i
+                //     console.log(artist_3);
+                // }
+
+                // console.log(i.id);
+                artistall.push(i)
                 labels.push(i.artist)
                 xs_labels.push(i.listeners)
+
+
             }
         }
 
     }
-    // console.log(JSON.parse(selectedItems));
-    appendChart({ ys, xs_labels, labels })
+    console.log(artistall);
+    appendChart({ ys, xs_labels, labels, artistall })
 }
 
 
-
+let valueReturn = (arrayIn) => {
+    var value = []
+    for (let iterator in arrayIn) {
+        value.push(arrayIn[iterator])
+    }
+    return value
+}
 
 let appendChart = (data) => {
-
     // const NUMBER_CFG = { count: DATA_COUNT, min: -100, max: 100 };
 
-    let dd = data.xs_labels[0][0][2018][0]
-    let dt = []
-    console.log(dd)
+    let selectedLength = data.artistall.length;
 
-    for (const iterator in dd) {
-        console.log(dd[iterator]);
-        dt.push(dd[iterator])
-    }
-    console.log(dt);
+    let firstSelected = data.artistall[0]
+    let secondSelected = selectedLength > 1 ? data.artistall[1] : ""
+    let thirdSelected = selectedLength > 2 ? data.artistall[2] : ""
+
+    let firstSelected_y = valueReturn(firstSelected['listeners'][0]['2018'][0])
+    let secondSelected_y = selectedLength > 1 ? valueReturn(secondSelected['listeners'][0]['2018'][0]) : ""
+    let thirdSelected_y = selectedLength > 2 ? valueReturn(thirdSelected['listeners'][0]['2018'][0]) : ""
+
+
+
 
     const ctx = document.getElementById('graph-container').getContext('2d');
     const myChart = new Chart(ctx, {
@@ -255,8 +286,8 @@ let appendChart = (data) => {
         data: {
             labels: Object.keys(data.xs_labels[0][0][2018][0]),
             datasets: [{
-                label: '# of Votes',
-                data: dt,
+                label: data.labels[0],
+                data: firstSelected_y,
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
@@ -271,14 +302,55 @@ let appendChart = (data) => {
                     'rgba(75, 192, 192, 1)'
                 ],
                 borderWidth: 1
-            }]
+            }, {
+                label: selectedLength > 1 ? data.labels[1] : "",
+                data: secondSelected_y,
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)'
+
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)'
+                ],
+                borderWidth: 1
+            }, {
+                label: selectedLength > 2 ? data.labels[2] : "",
+                data: thirdSelected_y,
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)'
+
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)'
+                ],
+                borderWidth: 1
+            }
+            ]
         },
         options: {
             scales: {
                 y: {
                     beginAtZero: true
                 }
+            },
+            plugins: {
+                legend: {
+                    display: true
+                }
             }
+
         }
     });
 
