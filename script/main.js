@@ -15,10 +15,8 @@ getData()
 
 // Append selected card to the compare bar....2xvan
 const addToCompare = (nameIn) => {
-
     // Append selected card to the compare bar
     let barValues = sessionStorage.getItem("toCompare") != null ? sessionStorage.getItem("toCompare") : [];
-    console.log(nameIn.parentElement.children[0].innerHTML);
     if (!barValues.includes(nameIn.parentElement.children[0].innerHTML)) {
         let newCard = document.createElement("div")
         newCard.classList.add("compare-item-card")
@@ -72,7 +70,6 @@ const getFromsessionStorage = () => {
     else {
         toCompare = JSON.parse(sessionStorage.getItem('toCompare'))
     }
-    console.log(toCompare);
     for (const iti of toCompare) {
         let newCard = document.createElement("div")
         newCard.classList.add("compare-item-card")
@@ -103,11 +100,7 @@ let tranformToSearch = () => {
 
             </tbody>
                 
-        </table>
-        
-        
-        
-        `
+        </table>`
         let oldItem = document.querySelector(".add-more-btn")
         setTimeout(() => {
             document.querySelector(".search-input").focus()
@@ -120,19 +113,30 @@ let tranformToSearch = () => {
 tranformToSearch()
 
 // animation to searchbar to disappear
-let closeSearch = () => {
-    document.querySelector(".spanom").addEventListener("click", () => {
-        let oldItem = document.querySelector(".search-container")
-        let newItem = document.createElement("div")
-        newItem.setAttribute('onclick', "tranformToSearch()")
+let closeSearch = (click) => {
+    let oldItem = document.querySelector(".search-container")
+    let newItem = document.createElement("div")
+    let clsItem = document.querySelector(".spanom")
+    if (clsItem != null && oldItem != null) {
+        clsItem.addEventListener("click", () => {
 
-        newItem.classList.add("add-more-btn")
-        newItem.innerHTML = ` <p>add more</p><span>&#10005;</span>`
-        document.querySelector(".compare-container").replaceChild(newItem, oldItem)
-        setTimeout(() => {
-            newItem.click()
-        }, 10);
-    })
+            newItem.setAttribute('onclick', "tranformToSearch()")
+
+            newItem.classList.add("add-more-btn")
+            newItem.innerHTML = ` <p>add more</p><span>&#10005;</span>`
+            document.querySelector(".compare-container").replaceChild(newItem, oldItem)
+            setTimeout(() => {
+                newItem.click()
+                if (click == "clicked") {
+                    appendSerch("")
+                    clsItem.click()
+                }
+            }, 10);
+        }
+        )
+
+    }
+
 }
 
 let Append = (wholeDataBase) => {
@@ -182,9 +186,8 @@ const search = () => {
         }
         else {
             appendSerch("")
+            closeSearch("clicked")
         }
-
-
     })
 
     closeSearch()
@@ -193,24 +196,67 @@ const search = () => {
 
 
 
+// document.addEventListener('click', () => {
+//     let iz = document.querySelector(".search-input")
+//     if (iz != document.activeElement) {
+//         closeSearch("clicked")
+//     }
+
+// });
 
 
 
 
 
+const compare = () => {
+    let selectedItems = sessionStorage.getItem("toCompare")
+    let selectedItemss = JSON.parse(selectedItems)
+
+    let xs_labels = []
+    let ys = [80, 90, 100, 110, 120]
+    let labels = []
+
+    for (let i of dataStorage) {
+
+        for (let k of selectedItemss) {
+
+            if (i.artist == k) {
+                console.log(i.id);
+                labels.push(i.artist)
+                xs_labels.push(i.listeners)
+            }
+        }
+
+    }
+    // console.log(JSON.parse(selectedItems));
+    appendChart({ ys, xs_labels, labels })
+}
 
 
-let compare = () => {
 
-    let sStorage = sessionStorage.getItem("toCompare")
+
+let appendChart = (data) => {
+
+    // const NUMBER_CFG = { count: DATA_COUNT, min: -100, max: 100 };
+
+    let dd = data.xs_labels[0][0][2018][0]
+    let dt = []
+    console.log(dd)
+
+    for (const iterator in dd) {
+        console.log(dd[iterator]);
+        dt.push(dd[iterator])
+    }
+    console.log(dt);
+
     const ctx = document.getElementById('graph-container').getContext('2d');
     const myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: sStorage,
+            labels: Object.keys(data.xs_labels[0][0][2018][0]),
             datasets: [{
-                label: sStorage,
-                data: [12, 19, 3, 5],
+                label: '# of Votes',
+                data: dt,
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
