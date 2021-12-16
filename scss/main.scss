@@ -159,7 +159,6 @@ header {
   height: 30px;
   margin: auto 50px auto auto;
   border-radius: 15px;
-  border: $border;
   cursor: pointer;
   color: $main-color;
   background-color: rgb(48, 48, 48);
@@ -169,7 +168,6 @@ header {
 
 #scene {
   width: 700px;
-  border: $border;
   margin: 40px auto 110px auto;
 }
 
@@ -190,4 +188,10 @@ header {
     transform: rotate(90deg);
     // color: $compare-bar-background;
   }
+}
+
+// ideiglenes Rekanak tesztre
+pre {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #595959;
 }

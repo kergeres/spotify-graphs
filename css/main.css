@@ -149,7 +149,6 @@ header .compare-bar .compare-container .search-container {
   height: 30px;
   margin: auto 50px auto auto;
   border-radius: 15px;
-  border: 1px solid black;
   cursor: pointer;
   color: #1db954;
   background-color: #303030;
@@ -157,7 +156,6 @@ header .compare-bar .compare-container .search-container {
 
 #scene {
   width: 700px;
-  border: 1px solid black;
   margin: 40px auto 110px auto;
 }
 
@@ -176,6 +174,10 @@ header .compare-bar .compare-container .search-container {
   100% {
     transform: rotate(90deg);
   }
+}
+pre {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #595959;
 }
 
 /*# sourceMappingURL=main.css.map */

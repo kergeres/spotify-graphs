@@ -348,6 +348,10 @@ let appendChart = (data) => {
             plugins: {
                 legend: {
                     display: true
+                },
+                title: {
+                    display: true,
+                    text: 'hallgatottsag'
                 }
             }
 
