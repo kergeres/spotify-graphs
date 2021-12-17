@@ -167,8 +167,8 @@ header {
 // main
 
 #scene {
-  width: 700px;
-  margin: 40px auto 110px auto;
+  width: 950px;
+  margin: 0 auto 110px auto;
 }
 
 @keyframes searchExpand {
@@ -188,10 +188,4 @@ header {
     transform: rotate(90deg);
     // color: $compare-bar-background;
   }
-}
-
-// ideiglenes Rekanak tesztre
-pre {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #595959;
 }

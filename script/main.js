@@ -43,7 +43,6 @@ const deleteFromsessionStorage = (item) => {
         toCompare = JSON.parse(sessionStorage.getItem('toCompare'))
     }
     let itemToRemoveIndex = item.children[0].innerText;
-    console.log(toCompare);
     toCompare.splice(toCompare.indexOf(itemToRemoveIndex), 1);
     sessionStorage.setItem('toCompare', JSON.stringify(toCompare))
 }
@@ -251,7 +250,9 @@ const compare = () => {
         }
 
     }
-    console.log(artistall);
+
+    // reset the canvas for chart (avoid to destroy)
+    document.querySelector("#scene").innerHTML = '<canvas id="graph-container"></canvas>'
     appendChart({ ys, xs_labels, labels, artistall })
 }
 
@@ -265,7 +266,6 @@ let valueReturn = (arrayIn) => {
 }
 
 let appendChart = (data) => {
-    // const NUMBER_CFG = { count: DATA_COUNT, min: -100, max: 100 };
 
     let selectedLength = data.artistall.length;
 
@@ -277,65 +277,32 @@ let appendChart = (data) => {
     let secondSelected_y = selectedLength > 1 ? valueReturn(secondSelected['listeners'][0]['2018'][0]) : ""
     let thirdSelected_y = selectedLength > 2 ? valueReturn(thirdSelected['listeners'][0]['2018'][0]) : ""
 
-
-
-
-    const ctx = document.getElementById('graph-container').getContext('2d');
-    const myChart = new Chart(ctx, {
+    var ctx = document.getElementById('graph-container').getContext('2d');
+    var myChart = new Chart(ctx, {
         type: 'line',
         data: {
             labels: Object.keys(data.xs_labels[0][0][2018][0]),
             datasets: [{
                 label: data.labels[0],
                 data: firstSelected_y,
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)'
-
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)'
-                ],
-                borderWidth: 1
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 2,
+                radius: 1.5
             }, {
                 label: selectedLength > 1 ? data.labels[1] : "",
                 data: secondSelected_y,
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)'
-
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)'
-                ],
-                borderWidth: 1
+                backgroundColor: selectedLength > 1 ? 'rgba(54, 162, 235, 0.2)' : 'rgba(54, 162, 235, 0)',
+                borderColor: selectedLength > 1 ? 'rgba(54, 162, 235, 1)' : 'rgba(54, 162, 235, 0)',
+                borderWidth: 2,
+                radius: 1.5
             }, {
                 label: selectedLength > 2 ? data.labels[2] : "",
                 data: thirdSelected_y,
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)'
-
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)'
-                ],
-                borderWidth: 1
+                backgroundColor: selectedLength > 2 ? 'rgba(54, 162, 0, 0.2)' : 'rgba(54, 162, 0, 0)',
+                borderColor: selectedLength > 2 ? 'rgba(54, 162, 0, 1)' : 'rgba(54, 162, 0, 0)',
+                borderWidth: 2,
+                radius: 1.5
             }
             ]
         },
@@ -347,17 +314,24 @@ let appendChart = (data) => {
             },
             plugins: {
                 legend: {
-                    display: true
+                    display: true,
+                    position: 'bottom'
                 },
                 title: {
                     display: true,
-                    text: 'hallgatottsag'
+                    text: 'hallgatottsag',
+                    padding: 30,
+                    fontsize: '30px',
+                    font: {
+                        weight: 'bold',
+                        size: 20
+                    },
                 }
             }
 
         }
     });
-
+    myChart.update()
 
 }
 

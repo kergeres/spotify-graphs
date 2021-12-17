@@ -155,8 +155,8 @@ header .compare-bar .compare-container .search-container {
 }
 
 #scene {
-  width: 700px;
-  margin: 40px auto 110px auto;
+  width: 950px;
+  margin: 0 auto 110px auto;
 }
 
 @keyframes searchExpand {
@@ -174,10 +174,6 @@ header .compare-bar .compare-container .search-container {
   100% {
     transform: rotate(90deg);
   }
-}
-pre {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #595959;
 }
 
 /*# sourceMappingURL=main.css.map */
