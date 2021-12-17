@@ -39,21 +39,32 @@ header {
     background-color: $compare-bar-background;
     // margin-bottom: 190px;
     left: 0px;
+    top: 120px;
     position: absolute;
     -webkit-box-shadow: 1px 5px 5px 0px rgba(44, 44, 44, 0.1);
     -moz-box-shadow: 1px 5px 5px 0px rgba(44, 44, 44, 0.1);
     box-shadow: 1px 5px 5px 0px rgba(44, 44, 44, 0.1);
+    min-height: 60px;
 
     .compare-container {
-      width: 1150px;
+      max-width: 1150px;
       min-height: 60px;
       margin: 0 auto;
       display: flex;
 
+      .cards-container {
+        clear: both;
+        width: 800px;
+        min-height: 60px;
+        padding-top: 5px;
+        padding-bottom: 10px;
+      }
+
       .compare-item-card {
+        float: left;
         min-width: 80px;
         height: 30px;
-        margin: auto 10px;
+        margin: 5px 10px 0 10px;
         display: flex;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 700;
@@ -71,10 +82,17 @@ header {
         @extend .compare-item-card;
         background-color: $compare-bar-background;
         color: $main-color;
+        // margin-top: 5px;
         border: 1px solid $main-color;
         cursor: pointer;
         span {
           transform: rotate(45deg);
+        }
+
+        .card-container {
+          display: flex;
+          float: left;
+          // margin-top: 5px;
         }
       }
       .search-container {
@@ -150,10 +168,6 @@ header {
   }
 }
 
-.card-container {
-  display: flex;
-}
-
 .compare-btn {
   width: 90px;
   height: 30px;
@@ -169,6 +183,40 @@ header {
 #scene {
   width: 950px;
   margin: 0 auto 110px auto;
+}
+
+.details-bar {
+  width: 100%;
+  height: 50px;
+  z-index: 3;
+  border: $border;
+
+  left: 0px;
+  top: 70px;
+  position: absolute;
+  -webkit-box-shadow: 1px 5px 5px 0px rgba(44, 44, 44, 0.1);
+  -moz-box-shadow: 1px 5px 5px 0px rgba(44, 44, 44, 0.1);
+  box-shadow: 1px 5px 5px 0px rgba(44, 44, 44, 0.1);
+
+  .detail-container {
+    max-width: 1150px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    // justify-content: space-around;
+    align-items: baseline;
+    #year-select {
+      width: 140px;
+      text-align: center;
+      outline: none;
+      border-radius: 2px;
+      margin: auto 50px;
+
+      option {
+        font-size: 16px;
+      }
+    }
+  }
 }
 
 @keyframes searchExpand {

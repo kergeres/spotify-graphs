@@ -26,6 +26,8 @@ const addToCompare = (nameIn) => {
     }
 
 
+
+
 }
 
 // Delete cards from the compare par by click on X
@@ -58,6 +60,7 @@ const saveTosessionStorage = (item) => {
         toCompare = JSON.parse(sessionStorage.getItem('toCompare'))
     }
     toCompare.push(item)
+    console.log(item);
     sessionStorage.setItem('toCompare', JSON.stringify(toCompare))
 }
 // get and append the locasstorage values (saved artists/albums etc) to the DOM 
@@ -104,7 +107,7 @@ let tranformToSearch = () => {
         setTimeout(() => {
             document.querySelector(".search-input").focus()
         }, 10);
-        document.querySelector(".compare-container").replaceChild(newItem, oldItem)
+        document.querySelector(".cards-container").replaceChild(newItem, oldItem)
         search()
     })
 
@@ -123,20 +126,22 @@ let closeSearch = (click) => {
 
             newItem.classList.add("add-more-btn")
             newItem.innerHTML = ` <p>add more</p><span>&#10005;</span>`
-            document.querySelector(".compare-container").replaceChild(newItem, oldItem)
-            setTimeout(() => {
-                newItem.click()
-                if (click == "clicked") {
-                    appendSerch("")
-                    clsItem.click()
-                }
-            }, 10);
+            document.querySelector(".cards-container").replaceChild(newItem, oldItem)
+
         }
         )
 
+
     }
 
+
+
 }
+
+
+
+
+
 
 let Append = (wholeDataBase) => {
     let htmlTemlate = ""
@@ -147,9 +152,7 @@ let Append = (wholeDataBase) => {
     document.querySelector("#scene").innerHTML = htmlTemlate;
 }
 
-
-
-// HERE
+// display the filtered results
 let appendSerch = (filtered) => {
     let htmlTemlate = ""
     for (let iterator of filtered) {
@@ -209,6 +212,9 @@ const search = () => {
 
 const compare = () => {
     let selectedItems = sessionStorage.getItem("toCompare")
+    let selectedYears = document.querySelector("#year-select").value
+    console.log(selectedYears);
+    sessionStorage.setItem('year', JSON.stringify(selectedYears))
 
     let selectedItemsInString = JSON.parse(selectedItems)
     // console.log(selectedItemsInString.length);
@@ -216,9 +222,6 @@ const compare = () => {
     let ys = [80, 90, 100, 110, 120]
     let labels = []
 
-    let artist_1
-    let artist_2
-    let artist_3
 
     let artistall = []
 
@@ -227,20 +230,7 @@ const compare = () => {
         for (let k of selectedItemsInString) {
 
             if (i.artist == k) {
-                // if (artist_1 == null) {
-                //     artist_1 = i;
-                //     console.log(artist_1);
-                // }
-                // else if (artist_2 == null) {
-                //     artist_2 = i
-                //     console.log(artist_2);
-                // }
-                // else if (artist_3 == null) {
-                //     artist_3 = i
-                //     console.log(artist_3);
-                // }
 
-                // console.log(i.id);
                 artistall.push(i)
                 labels.push(i.artist)
                 xs_labels.push(i.listeners)
@@ -268,20 +258,23 @@ let valueReturn = (arrayIn) => {
 let appendChart = (data) => {
 
     let selectedLength = data.artistall.length;
+    let selectedYear = JSON.parse(sessionStorage.getItem('year'))
 
     let firstSelected = data.artistall[0]
     let secondSelected = selectedLength > 1 ? data.artistall[1] : ""
     let thirdSelected = selectedLength > 2 ? data.artistall[2] : ""
 
-    let firstSelected_y = valueReturn(firstSelected['listeners'][0]['2018'][0])
-    let secondSelected_y = selectedLength > 1 ? valueReturn(secondSelected['listeners'][0]['2018'][0]) : ""
-    let thirdSelected_y = selectedLength > 2 ? valueReturn(thirdSelected['listeners'][0]['2018'][0]) : ""
+    let firstSelected_y = valueReturn(firstSelected['listeners'][0][`${selectedYear}`][0])
+    let secondSelected_y = selectedLength > 1 ? valueReturn(secondSelected['listeners'][0][`${selectedYear}`][0]) : ""
+    let thirdSelected_y = selectedLength > 2 ? valueReturn(thirdSelected['listeners'][0][`${selectedYear}`][0]) : ""
+
+    console.log(selectedYear);
 
     var ctx = document.getElementById('graph-container').getContext('2d');
     var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: Object.keys(data.xs_labels[0][0][2018][0]),
+            labels: Object.keys(data.xs_labels[0][0][selectedYear][0]),
             datasets: [{
                 label: data.labels[0],
                 data: firstSelected_y,
@@ -331,7 +324,6 @@ let appendChart = (data) => {
 
         }
     });
-    myChart.update()
 
 }
 

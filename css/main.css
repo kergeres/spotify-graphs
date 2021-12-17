@@ -36,21 +36,31 @@ header .compare-bar {
   width: 100%;
   background-color: #48494c;
   left: 0px;
+  top: 120px;
   position: absolute;
   -webkit-box-shadow: 1px 5px 5px 0px rgba(44, 44, 44, 0.1);
   -moz-box-shadow: 1px 5px 5px 0px rgba(44, 44, 44, 0.1);
   box-shadow: 1px 5px 5px 0px rgba(44, 44, 44, 0.1);
+  min-height: 60px;
 }
 header .compare-bar .compare-container {
-  width: 1150px;
+  max-width: 1150px;
   min-height: 60px;
   margin: 0 auto;
   display: flex;
 }
+header .compare-bar .compare-container .cards-container {
+  clear: both;
+  width: 800px;
+  min-height: 60px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
 header .compare-bar .compare-container .compare-item-card, header .compare-bar .compare-container .add-more-btn, header .compare-bar .compare-container .search-container {
+  float: left;
   min-width: 80px;
   height: 30px;
-  margin: auto 10px;
+  margin: 5px 10px 0 10px;
   display: flex;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
@@ -72,6 +82,10 @@ header .compare-bar .compare-container .add-more-btn, header .compare-bar .compa
 }
 header .compare-bar .compare-container .add-more-btn span, header .compare-bar .compare-container .search-container span {
   transform: rotate(45deg);
+}
+header .compare-bar .compare-container .add-more-btn .card-container, header .compare-bar .compare-container .search-container .card-container {
+  display: flex;
+  float: left;
 }
 header .compare-bar .compare-container .search-container {
   border: none;
@@ -140,10 +154,6 @@ header .compare-bar .compare-container .search-container {
   color: #7a7a7a;
 }
 
-.card-container {
-  display: flex;
-}
-
 .compare-btn {
   width: 90px;
   height: 30px;
@@ -157,6 +167,36 @@ header .compare-bar .compare-container .search-container {
 #scene {
   width: 950px;
   margin: 0 auto 110px auto;
+}
+
+.details-bar {
+  width: 100%;
+  height: 50px;
+  z-index: 3;
+  border: 1px solid black;
+  left: 0px;
+  top: 70px;
+  position: absolute;
+  -webkit-box-shadow: 1px 5px 5px 0px rgba(44, 44, 44, 0.1);
+  -moz-box-shadow: 1px 5px 5px 0px rgba(44, 44, 44, 0.1);
+  box-shadow: 1px 5px 5px 0px rgba(44, 44, 44, 0.1);
+}
+.details-bar .detail-container {
+  max-width: 1150px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: baseline;
+}
+.details-bar .detail-container #year-select {
+  width: 140px;
+  text-align: center;
+  outline: none;
+  border-radius: 2px;
+  margin: auto 50px;
+}
+.details-bar .detail-container #year-select option {
+  font-size: 16px;
 }
 
 @keyframes searchExpand {
