@@ -114,9 +114,12 @@ header .compare-bar .compare-container .search-container {
   font-weight: 400px;
   padding-right: 30px;
   text-align: start;
+  width: 320px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .search-table thead tr:first-child {
   background-color: unset !important;
+  display: none;
 }
 .search-table td:first-child {
   padding-left: 7px;
@@ -246,7 +249,7 @@ header .compare-bar .compare-container .search-container {
   position: absolute;
   border: 1px solid black;
   margin-left: 50px;
-  width: 350px;
+  width: 500px;
 }
 
 .input-search {
@@ -259,17 +262,6 @@ header .compare-bar .compare-container .search-container {
   padding-left: 5px;
   caret-color: transparent;
   color: transparent;
-  -webkit-touch-callout: none;
-  /* iOS Safari */
-  -webkit-user-select: none;
-  /* Safari */
-  -khtml-user-select: none;
-  /* Konqueror HTML */
-  -moz-user-select: none;
-  /* Old versions of Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer/Edge */
-  user-select: none;
 }
 
 .for-input-search {
@@ -305,7 +297,7 @@ header .compare-bar .compare-container .search-container {
 }
 
 .input-search-to-search {
-  width: 230px;
+  width: 320px;
   caret-color: unset;
   color: unset;
 }

@@ -28,22 +28,65 @@ const addToCompare = (nameIn) => {
 
 
 }
-document.addEventListener('click', () => {
+
+
+// close searchbar if user clicks somewhere else 
+document.addEventListener("click", (evt) => {
+    const flyoutElement = document.querySelector(".addmr-container");
+    let targetElement = evt.target; // clicked element
+
+    do {
+        if (targetElement == flyoutElement) {
+            return;
+        }
+
+        targetElement = targetElement.parentNode;
+    } while (targetElement);
+
+    document.querySelector("#checkbox-search").checked = false
+});
+
+
+
+
+document.addEventListener('click', (e) => {
+
+
     if (document.querySelector("#checkbox-search").checked) {
-        console.log("pipa");
         document.querySelector(".for-input-search").style.opacity = "0"
         document.querySelector(".for-input-search").focus()
 
         document.querySelector(".for-checkbox-search").classList.add("x-rotate")
         document.querySelector(".input-search").classList.add("input-search-to-search")
+        search()
+        let newitem = `<table class="search-table">
+        <thead>
+            <tr>
+            <input spellcheck="false" class="input-search" id="input-search">
+            <label class="for-input-search" for="input-search">add more</label>
+
+
+            <input id="checkbox-search" type="checkbox">
+            <label class="for-checkbox-search" for="checkbox-search">&#10005;</label>
+
+            </tr>
+        </thead>
+        <tbody id="stable">
+
+        </tbody>
+
+    </table>`
+        // document.querySelector(".addmr-container").innerHTML = newitem
 
     }
     else if (!document.querySelector("#checkbox-search").checked) {
-        console.log("pipa ki");
+        document.querySelector(".input-search").value = ""
         document.querySelector(".for-input-search").style.opacity = "1"
         document.querySelector(".input-search").classList.remove("input-search-to-search")
         document.querySelector(".for-checkbox-search").classList.remove("x-rotate")
         document.querySelector(".for-input-search").blur()
+        appendSerch("")
+
     }
 })
 
@@ -51,10 +94,10 @@ const barItemCounter = () => {
     // let db = JSON.parse(sessionStorage.getItem("toCompare")).length;
     let db = 1;
     if (db > 2) {
-        document.querySelector(".add-more-btn").style.opacity = ".6";
-        document.querySelector(".add-more-btn").style.borderColor = "red";
-        document.querySelector(".add-more-btn").style.borderWidth = "2px";
-        document.querySelector(".add-more-btn").style.color = "red";
+        // document.querySelector(".add-more-btn").style.opacity = ".6";
+        // document.querySelector(".add-more-btn").style.borderColor = "red";
+        // document.querySelector(".add-more-btn").style.borderWidth = "2px";
+        // document.querySelector(".add-more-btn").style.color = "red";
         tranformToSearch(false)
     }
 
@@ -121,68 +164,61 @@ getFromsessionStorage()
 
 
 // animation to searchbar to appear
-let tranformToSearch = (ableOrNot) => {
+// let tranformToSearch = () => {
 
-    // let db = JSON.parse(sessionStorage.getItem("toCompare")).length;
-    // console.log(db);
-    if (ableOrNot = true) {
-        console.log("kisebb mint 3");
-        document.querySelector(".add-more-btn").addEventListener('click', () => {
+//     // let db = JSON.parse(sessionStorage.getItem("toCompare")).length;
+//     // console.log(db);
 
-            let newItem = document.createElement("div")
-            newItem.classList.add("search-container")
-            newItem.style.backgroundColor = "rgb(209, 209, 209)"
-            newItem.innerHTML = `
+//     console.log("kisebb mint 3");
+//     document.querySelector(".add-more-btn").addEventListener('click', () => {
 
-        <table class="search-table">
-            <thead>
-                <tr>
-                    <th><input placeholder="Search" class="search-input"></th>
-                    <th><span class="spanom">&#10005;</span></th>
-                </tr>
-            </thead>
-            <tbody id="stable">
+//         let newItem = document.createElement("div")
+//         newItem.classList.add("search-container")
+//         newItem.style.backgroundColor = "rgb(209, 209, 209)"
+//         newItem.innerHTML = `
 
-            </tbody>
-                
-        </table>`
-            let oldItem = document.querySelector(".add-more-btn")
-            setTimeout(() => {
-                document.querySelector(".search-input").focus()
-            }, 10);
-            document.querySelector(".cards-container").replaceChild(newItem, oldItem)
-            search()
-        })
+//         <table class="search-table">
+//             <thead>
+//                 <tr>
+//                     <th><input placeholder="Search" class="search-input"></th>
+//                     <th><span class="spanom">&#10005;</span></th>
+//                 </tr>
+//             </thead>
+//             <tbody id="stable">
 
-    }
+//             </tbody>
 
-}
+//         </table>`
 
-tranformToSearch()
+//     })
+
+// }
+
+// tranformToSearch()
 
 // animation to searchbar to disappear
-let closeSearch = (click) => {
-    let oldItem = document.querySelector(".search-container")
-    let newItem = document.createElement("div")
-    let clsItem = document.querySelector(".spanom")
-    if (clsItem != null && oldItem != null) {
-        clsItem.addEventListener("click", () => {
+// let closeSearch = (click) => {
+//     let oldItem = document.querySelector(".search-container")
+//     let newItem = document.createElement("div")
+//     let clsItem = document.querySelector(".spanom")
+//     if (clsItem != null && oldItem != null) {
+//         clsItem.addEventListener("click", () => {
 
-            newItem.setAttribute('onclick', "tranformToSearch()")
+//             newItem.setAttribute('onclick', "tranformToSearch()")
 
-            newItem.classList.add("add-more-btn")
-            newItem.innerHTML = ` <p>add more</p><span>&#10005;</span>`
-            document.querySelector(".cards-container").replaceChild(newItem, oldItem)
+//             newItem.classList.add("add-more-btn")
+//             newItem.innerHTML = ` <p>add more</p><span>&#10005;</span>`
+//             document.querySelector(".cards-container").replaceChild(newItem, oldItem)
 
-        }
-        )
-
-
-    }
+//         }
+//         )
 
 
+//     }
 
-}
+
+
+// }
 
 
 
@@ -202,8 +238,9 @@ let appendSerch = (filtered) => {
 
 // search in for artist,albums etc in the database
 const search = () => {
-    const inputfield = document.querySelector(".search-input")
+    const inputfield = document.querySelector(".input-search")
     inputfield.addEventListener("keyup", () => {
+        console.log(inputfield.value);
         let filteredResults = [];
         // go through the og database and check if the input matches de database
         for (const iti of dataStorage) {
@@ -223,11 +260,12 @@ const search = () => {
         }
         else {
             appendSerch("")
-            closeSearch("clicked")
         }
+
     })
 
-    closeSearch()
+
+    // closeSearch()
 }
 
 

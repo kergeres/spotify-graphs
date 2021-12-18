@@ -123,10 +123,13 @@ header {
   font-weight: 400px;
   padding-right: 30px;
   text-align: start;
+  width: 320px;
+  font-family: Arial, Helvetica, sans-serif;
 
   thead {
     tr:first-child {
       background-color: unset !important;
+      display: none;
     }
   }
   td:first-child {
@@ -275,7 +278,7 @@ header {
   position: absolute;
   border: $border;
   margin-left: 50px;
-  width: 350px;
+  width: 500px;
 }
 .input-search {
   border: 1px solid $main-color;
@@ -287,12 +290,6 @@ header {
   padding-left: 5px;
   caret-color: transparent;
   color: transparent;
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none;
 }
 .for-input-search {
   color: $main-color;
@@ -315,7 +312,6 @@ header {
   width: 23px;
   height: 23px;
   font-weight: bold;
-
   cursor: pointer;
   display: inline-block;
   transform: rotate(45deg);
@@ -326,7 +322,7 @@ header {
   animation: searchXRotate 0.5s forwards;
 }
 .input-search-to-search {
-  width: 230px;
+  width: 320px;
   caret-color: unset;
   color: unset;
 }

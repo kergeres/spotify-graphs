@@ -24,11 +24,27 @@
                     <div class="card-container">
 
                     </div>
+                    <div class="addmr-container">
+                        <table class="search-table">
+                            <thead>
+                                <tr>
+                                    <input spellcheck="false" class="input-search" id="input-search">
+                                    <label class="for-input-search" for="input-search">add more</label>
+                                    <input id="checkbox-search" type="checkbox">
+                                    <label class="for-checkbox-search" for="checkbox-search">&#10005;</label>
+                                </tr>
+                            </thead>
+                            <tbody id="stable">
 
-                    <div class="add-more-btn">
+                            </tbody>
+
+                        </table>
+                    </div>
+
+                    <!-- <div class="add-more-btn">
                         <p>add more</p>
                         <span>&#10005;</span>
-                    </div>
+                    </div> -->
                 </div>
                 <button onclick="compare()" class="compare-btn">compare</button>
             </div>
@@ -50,19 +66,12 @@
     <main>
         <div id="scene"><canvas id="graph-container"></canvas></div>
 
-        <div class="addmr-container">
-            <input spellcheck="false" class="input-search" id="input-search">
-            <label class="for-input-search" for="input-search">add more</label>
 
-
-            <input id="checkbox-search" type="checkbox">
-            <label class="for-checkbox-search" for="checkbox-search">&#10005;</label>
-
-        </div>
 
     </main>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
     <script src="script/main.js"></script>
