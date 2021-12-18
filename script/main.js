@@ -7,8 +7,7 @@ let dataStorage = []
 const getData = async () => {
     const response = await fetch(url)
     const data = await response.json()
-    // Append(data)                  ez a regi h1es append, torolt ezt es a funct is
-    // save to global var
+
     dataStorage = data;
 }
 getData()
@@ -29,11 +28,45 @@ const addToCompare = (nameIn) => {
 
 
 }
+document.addEventListener('click', () => {
+    if (document.querySelector("#checkbox-search").checked) {
+        console.log("pipa");
+        document.querySelector(".for-input-search").style.opacity = "0"
+        document.querySelector(".for-input-search").focus()
+
+        document.querySelector(".for-checkbox-search").classList.add("x-rotate")
+        document.querySelector(".input-search").classList.add("input-search-to-search")
+
+    }
+    else if (!document.querySelector("#checkbox-search").checked) {
+        console.log("pipa ki");
+        document.querySelector(".for-input-search").style.opacity = "1"
+        document.querySelector(".input-search").classList.remove("input-search-to-search")
+        document.querySelector(".for-checkbox-search").classList.remove("x-rotate")
+        document.querySelector(".for-input-search").blur()
+    }
+})
+
+const barItemCounter = () => {
+    // let db = JSON.parse(sessionStorage.getItem("toCompare")).length;
+    let db = 1;
+    if (db > 2) {
+        document.querySelector(".add-more-btn").style.opacity = ".6";
+        document.querySelector(".add-more-btn").style.borderColor = "red";
+        document.querySelector(".add-more-btn").style.borderWidth = "2px";
+        document.querySelector(".add-more-btn").style.color = "red";
+        tranformToSearch(false)
+    }
+
+    console.log(`sessionstorageOK ${db} `);
+}
 
 // Delete cards from the compare par by click on X
 const deleteFromCompare = (e) => {
+
     e.parentElement.remove()
     deleteFromsessionStorage(e.parentElement)
+
 }
 // Delete cards from the sessionStorage
 const deleteFromsessionStorage = (item) => {
@@ -43,10 +76,12 @@ const deleteFromsessionStorage = (item) => {
     }
     else {
         toCompare = JSON.parse(sessionStorage.getItem('toCompare'))
+
     }
     let itemToRemoveIndex = item.children[0].innerText;
     toCompare.splice(toCompare.indexOf(itemToRemoveIndex), 1);
     sessionStorage.setItem('toCompare', JSON.stringify(toCompare))
+    barItemCounter()
 }
 
 
@@ -62,6 +97,7 @@ const saveTosessionStorage = (item) => {
     toCompare.push(item)
     console.log(item);
     sessionStorage.setItem('toCompare', JSON.stringify(toCompare))
+    barItemCounter()
 }
 // get and append the locasstorage values (saved artists/albums etc) to the DOM 
 const getFromsessionStorage = () => {
@@ -79,17 +115,24 @@ const getFromsessionStorage = () => {
         document.querySelector(".card-container").appendChild(newCard)
 
     }
+    barItemCounter()
 }
 getFromsessionStorage()
 
 
 // animation to searchbar to appear
-let tranformToSearch = () => {
-    document.querySelector(".add-more-btn").addEventListener('click', () => {
-        let newItem = document.createElement("div")
-        newItem.classList.add("search-container")
-        newItem.style.backgroundColor = "rgb(209, 209, 209)"
-        newItem.innerHTML = `
+let tranformToSearch = (ableOrNot) => {
+
+    // let db = JSON.parse(sessionStorage.getItem("toCompare")).length;
+    // console.log(db);
+    if (ableOrNot = true) {
+        console.log("kisebb mint 3");
+        document.querySelector(".add-more-btn").addEventListener('click', () => {
+
+            let newItem = document.createElement("div")
+            newItem.classList.add("search-container")
+            newItem.style.backgroundColor = "rgb(209, 209, 209)"
+            newItem.innerHTML = `
 
         <table class="search-table">
             <thead>
@@ -103,15 +146,18 @@ let tranformToSearch = () => {
             </tbody>
                 
         </table>`
-        let oldItem = document.querySelector(".add-more-btn")
-        setTimeout(() => {
-            document.querySelector(".search-input").focus()
-        }, 10);
-        document.querySelector(".cards-container").replaceChild(newItem, oldItem)
-        search()
-    })
+            let oldItem = document.querySelector(".add-more-btn")
+            setTimeout(() => {
+                document.querySelector(".search-input").focus()
+            }, 10);
+            document.querySelector(".cards-container").replaceChild(newItem, oldItem)
+            search()
+        })
+
+    }
 
 }
+
 tranformToSearch()
 
 // animation to searchbar to disappear
@@ -140,18 +186,6 @@ let closeSearch = (click) => {
 
 
 
-
-
-
-let Append = (wholeDataBase) => {
-    let htmlTemlate = ""
-    for (let iterator of wholeDataBase) {
-        htmlTemlate += `<h1 onclick="addToCompare(this)">${iterator.artist}</h1>`
-
-    }
-    document.querySelector("#scene").innerHTML = htmlTemlate;
-}
-
 // display the filtered results
 let appendSerch = (filtered) => {
     let htmlTemlate = ""
@@ -159,7 +193,8 @@ let appendSerch = (filtered) => {
         htmlTemlate += `
                 <tr>
                     <td onclick="addToCompare(this)" >${iterator.artist}</td>
-                    <td onclick="addToCompare(this)" ><i  class="far fa-plus-square"></i></td>
+                    <td ><span class="item-type">artist</span></td>
+                    <td onclick="addToCompare(this)"><i  class="far fa-plus-square"></i></td>
                 </tr>`
     }
     document.querySelector("#stable").innerHTML = htmlTemlate;
@@ -205,7 +240,6 @@ const search = () => {
 //     }
 
 // });
-
 
 
 
@@ -258,72 +292,77 @@ let valueReturn = (arrayIn) => {
 let appendChart = (data) => {
 
     let selectedLength = data.artistall.length;
-    let selectedYear = JSON.parse(sessionStorage.getItem('year'))
+    if (selectedLength > 0) {
+        let selectedYear = JSON.parse(sessionStorage.getItem('year'))
 
-    let firstSelected = data.artistall[0]
-    let secondSelected = selectedLength > 1 ? data.artistall[1] : ""
-    let thirdSelected = selectedLength > 2 ? data.artistall[2] : ""
+        let firstSelected = data.artistall[0]
+        let secondSelected = selectedLength > 1 ? data.artistall[1] : ""
+        let thirdSelected = selectedLength > 2 ? data.artistall[2] : ""
 
-    let firstSelected_y = valueReturn(firstSelected['listeners'][0][`${selectedYear}`][0])
-    let secondSelected_y = selectedLength > 1 ? valueReturn(secondSelected['listeners'][0][`${selectedYear}`][0]) : ""
-    let thirdSelected_y = selectedLength > 2 ? valueReturn(thirdSelected['listeners'][0][`${selectedYear}`][0]) : ""
+        // valueReturn(firstSelected['listeners'][0][`${selectedYear}`][0])   ---ez volt eredetileg
 
-    console.log(selectedYear);
+        let firstSelected_y = selectedLength > 0 ? valueReturn(firstSelected['listeners'][0][`${selectedYear}`][0]) : ""
+        let secondSelected_y = selectedLength > 1 ? valueReturn(secondSelected['listeners'][0][`${selectedYear}`][0]) : ""
+        let thirdSelected_y = selectedLength > 2 ? valueReturn(thirdSelected['listeners'][0][`${selectedYear}`][0]) : ""
 
-    var ctx = document.getElementById('graph-container').getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: Object.keys(data.xs_labels[0][0][selectedYear][0]),
-            datasets: [{
-                label: data.labels[0],
-                data: firstSelected_y,
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                borderColor: 'rgba(255, 99, 132, 1)',
-                borderWidth: 2,
-                radius: 1.5
-            }, {
-                label: selectedLength > 1 ? data.labels[1] : "",
-                data: secondSelected_y,
-                backgroundColor: selectedLength > 1 ? 'rgba(54, 162, 235, 0.2)' : 'rgba(54, 162, 235, 0)',
-                borderColor: selectedLength > 1 ? 'rgba(54, 162, 235, 1)' : 'rgba(54, 162, 235, 0)',
-                borderWidth: 2,
-                radius: 1.5
-            }, {
-                label: selectedLength > 2 ? data.labels[2] : "",
-                data: thirdSelected_y,
-                backgroundColor: selectedLength > 2 ? 'rgba(54, 162, 0, 0.2)' : 'rgba(54, 162, 0, 0)',
-                borderColor: selectedLength > 2 ? 'rgba(54, 162, 0, 1)' : 'rgba(54, 162, 0, 0)',
-                borderWidth: 2,
-                radius: 1.5
-            }
-            ]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
+        console.log(selectedYear);
+
+        var ctx = document.getElementById('graph-container').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: Object.keys(data.xs_labels[0][0][selectedYear][0]),
+                datasets: [{
+                    label: data.labels[0],
+                    data: firstSelected_y,
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 2,
+                    radius: 1.5
+                }, {
+                    label: selectedLength > 1 ? data.labels[1] : "",
+                    data: secondSelected_y,
+                    backgroundColor: selectedLength > 1 ? 'rgba(54, 162, 235, 0.2)' : 'rgba(54, 162, 235, 0)',
+                    borderColor: selectedLength > 1 ? 'rgba(54, 162, 235, 1)' : 'rgba(54, 162, 235, 0)',
+                    borderWidth: 2,
+                    radius: 1.5
+                }, {
+                    label: selectedLength > 2 ? data.labels[2] : "",
+                    data: thirdSelected_y,
+                    backgroundColor: selectedLength > 2 ? 'rgba(54, 162, 0, 0.2)' : 'rgba(54, 162, 0, 0)',
+                    borderColor: selectedLength > 2 ? 'rgba(54, 162, 0, 1)' : 'rgba(54, 162, 0, 0)',
+                    borderWidth: 2,
+                    radius: 1.5
                 }
+                ]
             },
-            plugins: {
-                legend: {
-                    display: true,
-                    position: 'bottom'
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
                 },
-                title: {
-                    display: true,
-                    text: 'hallgatottsag',
-                    padding: 30,
-                    fontsize: '30px',
-                    font: {
-                        weight: 'bold',
-                        size: 20
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'bottom'
                     },
+                    title: {
+                        display: true,
+                        text: `hallgatottsag of ${selectedYear}`,
+                        padding: 30,
+                        fontsize: '30px',
+                        font: {
+                            weight: 'bold',
+                            size: 20
+                        },
+                    }
                 }
-            }
 
-        }
-    });
+            }
+        });
+    }
+
 
 }
 
@@ -331,7 +370,7 @@ let appendChart = (data) => {
 
 
 
-
+barItemCounter()
 
 
 

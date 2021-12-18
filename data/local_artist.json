@@ -1,724 +1,7 @@
 [
   {
     "id": "6u7q0ZGK0oilVYx4kqIk3E",
-    "artist": "krúbi és a fenegyerekek",
-    "formed": "2017",
-    "listeners": [
-      {
-        "2018": [
-          {
-            "january": 78,
-            "february": 91,
-            "march": 104,
-            "aprl": 100,
-            "may": 89,
-            "jun": 93,
-            "july": 89,
-            "august": 86,
-            "september": 110,
-            "october": 106,
-            "november": 107,
-            "december": 74
-          }
-        ],
-        "2019": [
-          {
-            "january": 94,
-            "february": 82,
-            "march": 76,
-            "aprl": 98,
-            "may": 77,
-            "jun": 88,
-            "july": 99,
-            "august": 79,
-            "september": 93,
-            "october": 82,
-            "november": 87,
-            "december": 89
-          }
-        ],
-        "2020": [
-          {
-            "january": 102,
-            "february": 86,
-            "march": 89,
-            "aprl": 90,
-            "may": 73,
-            "jun": 107,
-            "july": 92,
-            "august": 103,
-            "september": 91,
-            "october": 70,
-            "november": 80,
-            "december": 95
-          }
-        ]
-      }
-    ],
-    "albums": [
-      {
-        "Nehézlábérzés": 2018,
-        "Ösztönlény": 2020,
-        "Zárolás feloldva": 2019
-      }
-    ],
-    "top3track": [
-      {
-        "THC zrt": [
-          {
-            "released": 2018,
-            "listeners": [
-              {
-                "2018": [
-                  {
-                    "january": 111,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ],
-                "2019": [
-                  {
-                    "january": 111,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ],
-                "2020": [
-                  {
-                    "january": 100,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ]
-              }
-            ]
-          }
-        ],
-        "Pesti Est": [
-          {
-            "released": 2018,
-            "listeners": [
-              {
-                "2018": [
-                  {
-                    "january": 111,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ],
-                "2019": [
-                  {
-                    "january": 111,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ],
-                "2020": [
-                  {
-                    "january": 99,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ]
-              }
-            ]
-          }
-        ],
-        "Üzenetek": [
-          {
-            "released": 2018,
-            "listeners": [
-              {
-                "2018": [
-                  {
-                    "january": 111,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ],
-                "2019": [
-                  {
-                    "january": 111,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ],
-                "2020": [
-                  {
-                    "january": 97,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "6u7q0ZGK0oilVYx4kqIk3E",
-    "artist": "30Y",
-    "formed": "2017",
-    "listeners": [
-      {
-        "2018": [
-          {
-            "january": 78,
-            "february": 91,
-            "march": 104,
-            "aprl": 100,
-            "may": 89,
-            "jun": 93,
-            "july": 89,
-            "august": 86,
-            "september": 110,
-            "october": 106,
-            "november": 107,
-            "december": 74
-          }
-        ],
-        "2019": [
-          {
-            "january": 94,
-            "february": 82,
-            "march": 76,
-            "aprl": 98,
-            "may": 77,
-            "jun": 88,
-            "july": 99,
-            "august": 79,
-            "september": 93,
-            "october": 82,
-            "november": 87,
-            "december": 89
-          }
-        ],
-        "2020": [
-          {
-            "january": 102,
-            "february": 86,
-            "march": 89,
-            "aprl": 90,
-            "may": 73,
-            "jun": 107,
-            "july": 92,
-            "august": 103,
-            "september": 91,
-            "october": 70,
-            "november": 80,
-            "december": 95
-          }
-        ]
-      }
-    ],
-    "albums": [
-      {
-        "Nehézlábérzés": 2018,
-        "Ösztönlény": 2020,
-        "Zárolás feloldva": 2019
-      }
-    ],
-    "top3track": [
-      {
-        "THC zrt": [
-          {
-            "released": 2018,
-            "listeners": [
-              {
-                "2018": [
-                  {
-                    "january": 111,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ],
-                "2019": [
-                  {
-                    "january": 111,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ],
-                "2020": [
-                  {
-                    "january": 100,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ]
-              }
-            ]
-          }
-        ],
-        "Pesti Est": [
-          {
-            "released": 2018,
-            "listeners": [
-              {
-                "2018": [
-                  {
-                    "january": 111,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ],
-                "2019": [
-                  {
-                    "january": 111,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ],
-                "2020": [
-                  {
-                    "january": 99,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ]
-              }
-            ]
-          }
-        ],
-        "Üzenetek": [
-          {
-            "released": 2018,
-            "listeners": [
-              {
-                "2018": [
-                  {
-                    "january": 111,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ],
-                "2019": [
-                  {
-                    "january": 111,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ],
-                "2020": [
-                  {
-                    "january": 97,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "6u7q0ZGK0oilVYx4kqIk3E",
-    "artist": "Sub Bass Monster",
-    "formed": "2017",
-    "listeners": [
-      {
-        "2018": [
-          {
-            "january": 78,
-            "february": 91,
-            "march": 104,
-            "aprl": 100,
-            "may": 89,
-            "jun": 93,
-            "july": 89,
-            "august": 86,
-            "september": 110,
-            "october": 106,
-            "november": 107,
-            "december": 74
-          }
-        ],
-        "2019": [
-          {
-            "january": 94,
-            "february": 82,
-            "march": 76,
-            "aprl": 98,
-            "may": 77,
-            "jun": 88,
-            "july": 99,
-            "august": 79,
-            "september": 93,
-            "october": 82,
-            "november": 87,
-            "december": 89
-          }
-        ],
-        "2020": [
-          {
-            "january": 102,
-            "february": 86,
-            "march": 89,
-            "aprl": 90,
-            "may": 73,
-            "jun": 107,
-            "july": 92,
-            "august": 103,
-            "september": 91,
-            "october": 70,
-            "november": 80,
-            "december": 95
-          }
-        ]
-      }
-    ],
-    "albums": [
-      {
-        "Nehézlábérzés": 2018,
-        "Ösztönlény": 2020,
-        "Zárolás feloldva": 2019
-      }
-    ],
-    "top3track": [
-      {
-        "THC zrt": [
-          {
-            "released": 2018,
-            "listeners": [
-              {
-                "2018": [
-                  {
-                    "january": 111,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ],
-                "2019": [
-                  {
-                    "january": 111,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ],
-                "2020": [
-                  {
-                    "january": 100,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ]
-              }
-            ]
-          }
-        ],
-        "Pesti Est": [
-          {
-            "released": 2018,
-            "listeners": [
-              {
-                "2018": [
-                  {
-                    "january": 111,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ],
-                "2019": [
-                  {
-                    "january": 111,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ],
-                "2020": [
-                  {
-                    "january": 99,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ]
-              }
-            ]
-          }
-        ],
-        "Üzenetek": [
-          {
-            "released": 2018,
-            "listeners": [
-              {
-                "2018": [
-                  {
-                    "january": 111,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ],
-                "2019": [
-                  {
-                    "january": 111,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ],
-                "2020": [
-                  {
-                    "january": 97,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "6u7q0ZGK0oilVYx4kqIk3E",
-    "artist": "Elefánt",
+    "artist": "krúbi",
     "formed": "2017",
     "listeners": [
       {
@@ -1675,6 +958,245 @@
   {
     "id": "71buZyotrHSZMVkSTcDY8c",
     "artist": "Kispál és a Borz",
+    "formed": "2017",
+    "listeners": [
+      {
+        "2018": [
+          {
+            "january": 71,
+            "february": 94,
+            "march": 81,
+            "aprl": 100,
+            "may": 74,
+            "jun": 98,
+            "july": 76,
+            "august": 90,
+            "september": 88,
+            "october": 96,
+            "november": 89,
+            "december": 109
+          }
+        ],
+        "2019": [
+          {
+            "january": 110,
+            "february": 75,
+            "march": 84,
+            "aprl": 104,
+            "may": 94,
+            "jun": 79,
+            "july": 71,
+            "august": 94,
+            "september": 79,
+            "october": 72,
+            "november": 91,
+            "december": 110
+          }
+        ],
+        "2020": [
+          {
+            "january": 88,
+            "february": 104,
+            "march": 101,
+            "aprl": 110,
+            "may": 82,
+            "jun": 93,
+            "july": 93,
+            "august": 102,
+            "september": 78,
+            "october": 106,
+            "november": 85,
+            "december": 105
+          }
+        ]
+      }
+    ],
+    "albums": [
+      {
+        "Nehézlábérzés": 2018,
+        "Ösztönlény": 2020,
+        "Zárolás feloldva": 2019
+      }
+    ],
+    "top3track": [
+      {
+        "THC zrt": [
+          {
+            "released": 2018,
+            "listeners": [
+              {
+                "2018": [
+                  {
+                    "january": 111,
+                    "february": 100,
+                    "march": 100,
+                    "aprl": 100,
+                    "may": 100,
+                    "jun": 100,
+                    "july": 100,
+                    "august": 100,
+                    "september": 100,
+                    "october": 100,
+                    "november": 100,
+                    "december": 100
+                  }
+                ],
+                "2019": [
+                  {
+                    "january": 111,
+                    "february": 100,
+                    "march": 100,
+                    "aprl": 100,
+                    "may": 100,
+                    "jun": 100,
+                    "july": 100,
+                    "august": 100,
+                    "september": 100,
+                    "october": 100,
+                    "november": 100,
+                    "december": 100
+                  }
+                ],
+                "2020": [
+                  {
+                    "january": 100,
+                    "february": 100,
+                    "march": 100,
+                    "aprl": 100,
+                    "may": 100,
+                    "jun": 100,
+                    "july": 100,
+                    "august": 100,
+                    "september": 100,
+                    "october": 100,
+                    "november": 100,
+                    "december": 100
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "Pesti Est": [
+          {
+            "released": 2018,
+            "listeners": [
+              {
+                "2018": [
+                  {
+                    "january": 111,
+                    "february": 100,
+                    "march": 100,
+                    "aprl": 100,
+                    "may": 100,
+                    "jun": 100,
+                    "july": 100,
+                    "august": 100,
+                    "september": 100,
+                    "october": 100,
+                    "november": 100,
+                    "december": 100
+                  }
+                ],
+                "2019": [
+                  {
+                    "january": 111,
+                    "february": 100,
+                    "march": 100,
+                    "aprl": 100,
+                    "may": 100,
+                    "jun": 100,
+                    "july": 100,
+                    "august": 100,
+                    "september": 100,
+                    "october": 100,
+                    "november": 100,
+                    "december": 100
+                  }
+                ],
+                "2020": [
+                  {
+                    "january": 99,
+                    "february": 100,
+                    "march": 100,
+                    "aprl": 100,
+                    "may": 100,
+                    "jun": 100,
+                    "july": 100,
+                    "august": 100,
+                    "september": 100,
+                    "october": 100,
+                    "november": 100,
+                    "december": 100
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "Üzenetek": [
+          {
+            "released": 2018,
+            "listeners": [
+              {
+                "2018": [
+                  {
+                    "january": 111,
+                    "february": 100,
+                    "march": 100,
+                    "aprl": 100,
+                    "may": 100,
+                    "jun": 100,
+                    "july": 100,
+                    "august": 100,
+                    "september": 100,
+                    "october": 100,
+                    "november": 100,
+                    "december": 100
+                  }
+                ],
+                "2019": [
+                  {
+                    "january": 111,
+                    "february": 100,
+                    "march": 100,
+                    "aprl": 100,
+                    "may": 100,
+                    "jun": 100,
+                    "july": 100,
+                    "august": 100,
+                    "september": 100,
+                    "october": 100,
+                    "november": 100,
+                    "december": 100
+                  }
+                ],
+                "2020": [
+                  {
+                    "january": 97,
+                    "february": 100,
+                    "march": 100,
+                    "aprl": 100,
+                    "may": 100,
+                    "jun": 100,
+                    "july": 100,
+                    "august": 100,
+                    "september": 100,
+                    "october": 100,
+                    "november": 100,
+                    "december": 100
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "6zerBCeTLTvR5tH4oEBRRw",
+    "artist": "Sub bass Monster",
     "formed": "2017",
     "listeners": [
       {
