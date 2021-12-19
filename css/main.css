@@ -135,6 +135,7 @@ header .compare-bar .compare-container .compare-item-card span {
 
 .compare-btn {
   width: 90px;
+  padding: 5px;
   height: 30px;
   margin: auto 50px auto auto;
   border-radius: 15px;
@@ -230,6 +231,7 @@ header .compare-bar .compare-container .compare-item-card span {
   padding-left: 5px;
   caret-color: transparent;
   color: transparent;
+  transform-origin: center;
 }
 
 .for-input-search {
@@ -268,6 +270,87 @@ header .compare-bar .compare-container .compare-item-card span {
   caret-color: unset;
   color: unset;
   border-color: #48494c;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    width: auto !important;
+  }
+
+  .compare-container {
+    width: auto !important;
+    max-width: unset !important;
+  }
+
+  .cards-container {
+    width: auto !important;
+    max-width: unset;
+  }
+
+  .compare-bar {
+    width: auto;
+  }
+
+  .card-container {
+    width: auto;
+  }
+
+  html {
+    width: auto;
+  }
+
+  #scene {
+    width: 100vw;
+    border: 1px solid black;
+    margin: 130px auto 110px auto;
+  }
+
+  .detail-container {
+    display: block;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .details-bar {
+    width: 100%;
+    height: 100px;
+  }
+
+  .addmr-container {
+    width: auto;
+    height: auto;
+    display: block;
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    top: 50px;
+  }
+
+  #year-select {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+
+  .input-search {
+    width: 320px;
+  }
+
+  .for-checkbox-search {
+    top: -27px;
+    right: -215px;
+  }
+
+  .graph-container {
+    width: 100%;
+    height: 70vh;
+    aspect-ratio: auto;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
