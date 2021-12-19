@@ -78,46 +78,10 @@ header {
           cursor: pointer;
         }
       }
-      .add-more-btn {
-        @extend .compare-item-card;
-        background-color: $compare-bar-background;
-        color: $main-color;
-        // margin-top: 5px;
-        border: 1px solid $main-color;
-        cursor: pointer;
-        span {
-          transform: rotate(45deg);
-        }
-
-        .card-container {
-          display: flex;
-          float: left;
-          // margin-top: 5px;
-        }
-      }
-      .search-container {
-        @extend .add-more-btn;
-        border: none;
-      }
     }
   }
 }
-.search-input {
-  width: 200px;
-  background-color: rgb(209, 209, 209);
-  border: none;
-  outline: none;
-  padding-left: 8px;
-  animation: searchExpand 0.5s forwards;
-}
-.spanom {
-  transition: 0.5s;
-  transform: rotate(0deg) !important;
-  color: $compare-bar-background;
-  animation: searchXRotate 0.5s forwards;
-  margin-right: 100px;
-  padding-right: 19px;
-}
+
 .search-table {
   border-collapse: collapse;
   font-weight: 400px;
@@ -253,9 +217,7 @@ header {
     }
   }
 }
-.disabled {
-  color: red;
-}
+
 @keyframes searchExpand {
   0% {
     width: 119px;
@@ -275,11 +237,18 @@ header {
   }
 }
 .addmr-container {
-  position: absolute;
+  // position: absolute;
   border: $border;
   margin-left: 50px;
   width: 500px;
+  right: 0;
 }
+.disabled {
+  color: red;
+  border-color: red;
+  background-color: gray;
+}
+
 .input-search {
   border: 1px solid $main-color;
   outline: none;

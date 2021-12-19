@@ -24,14 +24,12 @@ const addToCompare = (nameIn) => {
         document.querySelector(".card-container").appendChild(newCard)
     }
 
-
-
-
 }
 
 
 // close searchbar if user clicks somewhere else 
 document.addEventListener("click", (evt) => {
+    barItemCounter()
     const flyoutElement = document.querySelector(".addmr-container");
     let targetElement = evt.target; // clicked element
 
@@ -91,18 +89,30 @@ document.addEventListener('click', (e) => {
 })
 
 const barItemCounter = () => {
-    // let db = JSON.parse(sessionStorage.getItem("toCompare")).length;
-    let db = 1;
+    let db = JSON.parse(sessionStorage.getItem("toCompare")) != [] ? JSON.parse(sessionStorage.getItem("toCompare")).length : 0;
+
     if (db > 2) {
-        // document.querySelector(".add-more-btn").style.opacity = ".6";
-        // document.querySelector(".add-more-btn").style.borderColor = "red";
-        // document.querySelector(".add-more-btn").style.borderWidth = "2px";
-        // document.querySelector(".add-more-btn").style.color = "red";
-        tranformToSearch(false)
+        document.querySelector("#checkbox-search").checked = false;
+        document.querySelector("#checkbox-search").disabled = true;
+        document.querySelector(".input-search").classList.add("disabled")
+        document.querySelector(".for-input-search").classList.add("disabled")
+        document.querySelector(".compare-btn").disabled = false;
+
+    }
+    else if (db < 1) {
+        document.querySelector(".compare-btn").disabled = true;
+
+    }
+    else {
+        document.querySelector("#checkbox-search").disabled = false;
+        document.querySelector(".input-search").classList.remove("disabled")
+        document.querySelector(".for-input-search").classList.remove("disabled")
+        document.querySelector(".compare-btn").disabled = false;
+
     }
 
-    console.log(`sessionstorageOK ${db} `);
 }
+
 
 // Delete cards from the compare par by click on X
 const deleteFromCompare = (e) => {
@@ -111,6 +121,7 @@ const deleteFromCompare = (e) => {
     deleteFromsessionStorage(e.parentElement)
 
 }
+
 // Delete cards from the sessionStorage
 const deleteFromsessionStorage = (item) => {
     let toCompare;
@@ -124,7 +135,7 @@ const deleteFromsessionStorage = (item) => {
     let itemToRemoveIndex = item.children[0].innerText;
     toCompare.splice(toCompare.indexOf(itemToRemoveIndex), 1);
     sessionStorage.setItem('toCompare', JSON.stringify(toCompare))
-    barItemCounter()
+
 }
 
 
@@ -138,10 +149,10 @@ const saveTosessionStorage = (item) => {
         toCompare = JSON.parse(sessionStorage.getItem('toCompare'))
     }
     toCompare.push(item)
-    console.log(item);
     sessionStorage.setItem('toCompare', JSON.stringify(toCompare))
-    barItemCounter()
+
 }
+
 // get and append the locasstorage values (saved artists/albums etc) to the DOM 
 const getFromsessionStorage = () => {
     let toCompare;
@@ -158,68 +169,9 @@ const getFromsessionStorage = () => {
         document.querySelector(".card-container").appendChild(newCard)
 
     }
-    barItemCounter()
+
 }
 getFromsessionStorage()
-
-
-// animation to searchbar to appear
-// let tranformToSearch = () => {
-
-//     // let db = JSON.parse(sessionStorage.getItem("toCompare")).length;
-//     // console.log(db);
-
-//     console.log("kisebb mint 3");
-//     document.querySelector(".add-more-btn").addEventListener('click', () => {
-
-//         let newItem = document.createElement("div")
-//         newItem.classList.add("search-container")
-//         newItem.style.backgroundColor = "rgb(209, 209, 209)"
-//         newItem.innerHTML = `
-
-//         <table class="search-table">
-//             <thead>
-//                 <tr>
-//                     <th><input placeholder="Search" class="search-input"></th>
-//                     <th><span class="spanom">&#10005;</span></th>
-//                 </tr>
-//             </thead>
-//             <tbody id="stable">
-
-//             </tbody>
-
-//         </table>`
-
-//     })
-
-// }
-
-// tranformToSearch()
-
-// animation to searchbar to disappear
-// let closeSearch = (click) => {
-//     let oldItem = document.querySelector(".search-container")
-//     let newItem = document.createElement("div")
-//     let clsItem = document.querySelector(".spanom")
-//     if (clsItem != null && oldItem != null) {
-//         clsItem.addEventListener("click", () => {
-
-//             newItem.setAttribute('onclick', "tranformToSearch()")
-
-//             newItem.classList.add("add-more-btn")
-//             newItem.innerHTML = ` <p>add more</p><span>&#10005;</span>`
-//             document.querySelector(".cards-container").replaceChild(newItem, oldItem)
-
-//         }
-//         )
-
-
-//     }
-
-
-
-// }
-
 
 
 // display the filtered results
@@ -240,7 +192,6 @@ let appendSerch = (filtered) => {
 const search = () => {
     const inputfield = document.querySelector(".input-search")
     inputfield.addEventListener("keyup", () => {
-        console.log(inputfield.value);
         let filteredResults = [];
         // go through the og database and check if the input matches de database
         for (const iti of dataStorage) {
@@ -263,33 +214,20 @@ const search = () => {
         }
 
     })
-
-
-    // closeSearch()
 }
 
 
 
 
-// document.addEventListener('click', () => {
-//     let iz = document.querySelector(".search-input")
-//     if (iz != document.activeElement) {
-//         closeSearch("clicked")
-//     }
-
-// });
-
-
 
 
 const compare = () => {
-    let selectedItems = sessionStorage.getItem("toCompare")
+    let nth = ["", ""]
+    let selectedItems = sessionStorage.getItem("toCompare") != "undefined" ? sessionStorage.getItem("toCompare") : nth
     let selectedYears = document.querySelector("#year-select").value
-    console.log(selectedYears);
     sessionStorage.setItem('year', JSON.stringify(selectedYears))
 
     let selectedItemsInString = JSON.parse(selectedItems)
-    // console.log(selectedItemsInString.length);
     let xs_labels = []
     let ys = [80, 90, 100, 110, 120]
     let labels = []
@@ -343,7 +281,6 @@ let appendChart = (data) => {
         let secondSelected_y = selectedLength > 1 ? valueReturn(secondSelected['listeners'][0][`${selectedYear}`][0]) : ""
         let thirdSelected_y = selectedLength > 2 ? valueReturn(thirdSelected['listeners'][0][`${selectedYear}`][0]) : ""
 
-        console.log(selectedYear);
 
         var ctx = document.getElementById('graph-container').getContext('2d');
         var myChart = new Chart(ctx, {
@@ -406,9 +343,6 @@ let appendChart = (data) => {
 
 
 
-
-
-barItemCounter()
 
 
 

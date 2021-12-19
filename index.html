@@ -11,7 +11,7 @@
     <title>Spotify Graphs</title>
 </head>
 
-<body>
+<body onload="barItemCounter()">
     <header>
         <nav>
             <img src="icons\Spotify_Logo_RGB_Green.png">
@@ -24,27 +24,6 @@
                     <div class="card-container">
 
                     </div>
-                    <div class="addmr-container">
-                        <table class="search-table">
-                            <thead>
-                                <tr>
-                                    <input spellcheck="false" class="input-search" id="input-search">
-                                    <label class="for-input-search" for="input-search">add more</label>
-                                    <input id="checkbox-search" type="checkbox">
-                                    <label class="for-checkbox-search" for="checkbox-search">&#10005;</label>
-                                </tr>
-                            </thead>
-                            <tbody id="stable">
-
-                            </tbody>
-
-                        </table>
-                    </div>
-
-                    <!-- <div class="add-more-btn">
-                        <p>add more</p>
-                        <span>&#10005;</span>
-                    </div> -->
                 </div>
                 <button onclick="compare()" class="compare-btn">compare</button>
             </div>
@@ -56,7 +35,22 @@
                     <option>2019</option>
                     <option>2020</option>
                 </select>
+                <div class="addmr-container">
+                    <table class="search-table">
+                        <thead>
+                            <tr>
+                                <input spellcheck="false" class="input-search" id="input-search">
+                                <label class="for-input-search" for="input-search">add more</label>
+                                <input id="checkbox-search" type="checkbox">
+                                <label class="for-checkbox-search" for="checkbox-search">&#10005;</label>
+                            </tr>
+                        </thead>
+                        <tbody id="stable">
 
+                        </tbody>
+
+                    </table>
+                </div>
 
             </div>
 

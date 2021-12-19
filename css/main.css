@@ -56,7 +56,7 @@ header .compare-bar .compare-container .cards-container {
   padding-top: 5px;
   padding-bottom: 10px;
 }
-header .compare-bar .compare-container .compare-item-card, header .compare-bar .compare-container .add-more-btn, header .compare-bar .compare-container .search-container {
+header .compare-bar .compare-container .compare-item-card {
   float: left;
   min-width: 80px;
   height: 30px;
@@ -67,46 +67,12 @@ header .compare-bar .compare-container .compare-item-card, header .compare-bar .
   background-color: #1db954;
   color: #48494c;
 }
-header .compare-bar .compare-container .compare-item-card p, header .compare-bar .compare-container .add-more-btn p, header .compare-bar .compare-container .search-container p {
+header .compare-bar .compare-container .compare-item-card p {
   margin: auto 9px;
 }
-header .compare-bar .compare-container .compare-item-card span, header .compare-bar .compare-container .add-more-btn span, header .compare-bar .compare-container .search-container span {
+header .compare-bar .compare-container .compare-item-card span {
   margin: 2px 8px 2px 6px;
   cursor: pointer;
-}
-header .compare-bar .compare-container .add-more-btn, header .compare-bar .compare-container .search-container {
-  background-color: #48494c;
-  color: #1db954;
-  border: 1px solid #1db954;
-  cursor: pointer;
-}
-header .compare-bar .compare-container .add-more-btn span, header .compare-bar .compare-container .search-container span {
-  transform: rotate(45deg);
-}
-header .compare-bar .compare-container .add-more-btn .card-container, header .compare-bar .compare-container .search-container .card-container {
-  display: flex;
-  float: left;
-}
-header .compare-bar .compare-container .search-container {
-  border: none;
-}
-
-.search-input {
-  width: 200px;
-  background-color: #d1d1d1;
-  border: none;
-  outline: none;
-  padding-left: 8px;
-  animation: searchExpand 0.5s forwards;
-}
-
-.spanom {
-  transition: 0.5s;
-  transform: rotate(0deg) !important;
-  color: #48494c;
-  animation: searchXRotate 0.5s forwards;
-  margin-right: 100px;
-  padding-right: 19px;
 }
 
 .search-table {
@@ -225,10 +191,6 @@ header .compare-bar .compare-container .search-container {
   font-size: 16px;
 }
 
-.disabled {
-  color: red;
-}
-
 @keyframes searchExpand {
   0% {
     width: 119px;
@@ -246,10 +208,16 @@ header .compare-bar .compare-container .search-container {
   }
 }
 .addmr-container {
-  position: absolute;
   border: 1px solid black;
   margin-left: 50px;
   width: 500px;
+  right: 0;
+}
+
+.disabled {
+  color: red;
+  border-color: red;
+  background-color: gray;
 }
 
 .input-search {
