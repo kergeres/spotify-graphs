@@ -7,7 +7,6 @@
 
 body {
   max-width: 1150px;
-
   margin: 0 auto;
 }
 main {
@@ -37,14 +36,9 @@ header {
   .compare-bar {
     width: 100%;
     background-color: $compare-bar-background;
-    // margin-bottom: 190px;
     left: 0px;
-    top: 120px;
+    top: 70px;
     position: absolute;
-    -webkit-box-shadow: 1px 5px 5px 0px rgba(44, 44, 44, 0.1);
-    -moz-box-shadow: 1px 5px 5px 0px rgba(44, 44, 44, 0.1);
-    box-shadow: 1px 5px 5px 0px rgba(44, 44, 44, 0.1);
-    min-height: 60px;
 
     .compare-container {
       max-width: 1150px;
@@ -56,7 +50,7 @@ header {
         clear: both;
         width: 1000px;
         min-height: 60px;
-        padding-top: 5px;
+        padding-top: 10px;
         padding-bottom: 10px;
       }
 
@@ -100,10 +94,12 @@ header {
     //  szöveg bal margoja
     padding-left: 7px;
     display: inline;
+    cursor: pointer;
   }
   td:nth-child(2) {
     margin-right: 10px;
     text-align: left;
+    margin-left: 5px;
   }
   td:nth-child(3) {
     display: flex;
@@ -114,7 +110,7 @@ header {
     margin: auto auto;
 
     // ez alitja a + izeknek a jobb tavolsagat
-    right: 20px;
+    right: 11px;
     position: absolute;
   }
 
@@ -127,15 +123,9 @@ header {
 
   tr:nth-child(even) {
     background-color: #dddddd;
-    &:hover .fa-plus-square {
-      color: lighten(rgb(71, 71, 71), 20%);
-    }
   }
   tr:nth-child(odd) {
     background-color: #e7e6e6;
-    &:hover .fa-plus-square {
-      color: lighten(rgb(71, 71, 71), 20%);
-    }
   }
   .item-type {
     font-weight: lighter;
@@ -149,6 +139,7 @@ header {
   margin: 0 auto;
   color: rgb(71, 71, 71);
   font-size: 20px;
+  cursor: pointer;
   &:hover {
     color: lighten(rgb(71, 71, 71), 20%);
   }
@@ -180,52 +171,67 @@ header {
 // main
 
 #scene {
-  width: 950px;
-  margin: 0 auto 110px auto;
+  width: 850px;
+  height: 474px;
+  margin: 30px auto 110px auto;
+  // @include media("<=phone") {
+  //   width: 100%;
+  // }
+}
+.graph-container {
+  width: 100%;
+  height: 100%;
 }
 
 .details-bar {
   width: 100%;
   height: 50px;
-  z-index: 3;
-  border: $border;
-
+  z-index: 1;
+  border-bottom: 1px solid lightslategrey;
+  display: flex;
+  justify-content: center;
   left: 0px;
-  top: 70px;
+  top: 130px;
   position: absolute;
-  -webkit-box-shadow: 1px 5px 5px 0px rgba(44, 44, 44, 0.1);
-  -moz-box-shadow: 1px 5px 5px 0px rgba(44, 44, 44, 0.1);
-  box-shadow: 1px 5px 5px 0px rgba(44, 44, 44, 0.1);
+  -webkit-box-shadow: 1px 5px 5px 0px rgba(173, 173, 173, 0.1);
+  -moz-box-shadow: 1px 5px 5px 0px rgba(173, 173, 173, 0.1);
+  box-shadow: 1px 5px 5px 0px rgba(173, 173, 173, 0.1);
 
   .detail-container {
-    max-width: 1150px;
+    width: 1150px;
     height: 100%;
     margin: 0 auto;
-    display: flex;
-    // justify-content: space-around;
-    align-items: baseline;
+    justify-content: center;
+
     #year-select {
       width: 140px;
+      height: 30px;
+      color: $compare-bar-background;
       text-align: center;
       outline: none;
       border-radius: 2px;
-      margin: auto 50px;
+      margin: 10px 10px 0 10px;
 
+      cursor: pointer;
       option {
         font-size: 16px;
+        text-align: center;
+        outline: none;
+        color: $compare-bar-background;
+        background-color: none;
       }
     }
   }
 }
 
-@keyframes searchExpand {
-  0% {
-    width: 119px;
-  }
-  100% {
-    width: 400px;
-  }
+.addmr-container {
+  position: absolute;
+  display: inline-block;
+  width: 500px;
+  height: 30px;
+  margin: 10px 10px 0 10px;
 }
+
 @keyframes searchXRotate {
   0% {
     transform: rotate(45deg);
@@ -234,19 +240,13 @@ header {
   100% {
     transform: rotate(180deg);
     // color: $compare-bar-background;
+    color: $compare-bar-background;
   }
 }
-.addmr-container {
-  // position: absolute;
-  border: $border;
-  margin-left: 50px;
-  width: 500px;
-  right: 0;
-}
+
 .disabled {
-  color: red;
-  border-color: red;
-  background-color: gray;
+  background-color: #bdbdbd;
+  border: 1px solid #999999 !important;
 }
 
 .input-search {
@@ -263,9 +263,7 @@ header {
 .for-input-search {
   color: $main-color;
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 120px;
+  right: 118px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
 }
@@ -278,6 +276,7 @@ header {
   color: $main-color;
   position: relative;
   right: 105px;
+  top: -1px;
   width: 23px;
   height: 23px;
   font-weight: bold;
@@ -288,10 +287,11 @@ header {
   vertical-align: middle;
 }
 .x-rotate {
-  animation: searchXRotate 0.5s forwards;
+  animation: searchXRotate 1s forwards;
 }
 .input-search-to-search {
   width: 320px;
   caret-color: unset;
   color: unset;
+  border-color: $compare-bar-background;
 }

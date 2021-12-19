@@ -52,7 +52,7 @@ document.addEventListener('click', (e) => {
 
     if (document.querySelector("#checkbox-search").checked) {
         document.querySelector(".for-input-search").style.opacity = "0"
-        document.querySelector(".for-input-search").focus()
+        document.querySelector(".input-search").focus()
 
         document.querySelector(".for-checkbox-search").classList.add("x-rotate")
         document.querySelector(".input-search").classList.add("input-search-to-search")
@@ -89,25 +89,34 @@ document.addEventListener('click', (e) => {
 })
 
 const barItemCounter = () => {
-    let db = JSON.parse(sessionStorage.getItem("toCompare")) != [] ? JSON.parse(sessionStorage.getItem("toCompare")).length : 0;
+
+
+    let db = JSON.parse(sessionStorage.getItem("toCompare")) != null ? JSON.parse(sessionStorage.getItem("toCompare")).length : 0;
 
     if (db > 2) {
         document.querySelector("#checkbox-search").checked = false;
         document.querySelector("#checkbox-search").disabled = true;
         document.querySelector(".input-search").classList.add("disabled")
-        document.querySelector(".for-input-search").classList.add("disabled")
+        document.querySelector(".for-input-search").style.color = "gray"
+        document.querySelector(".for-checkbox-search").style.color = "gray"
         document.querySelector(".compare-btn").disabled = false;
 
     }
     else if (db < 1) {
         document.querySelector(".compare-btn").disabled = true;
+        document.querySelector(".for-input-search").innerHTML = "add artist"
+
 
     }
     else {
+        document.querySelector(".for-input-search").style.color = "#1db954"
+        document.querySelector(".for-checkbox-search").style.color = "#1db954"
         document.querySelector("#checkbox-search").disabled = false;
         document.querySelector(".input-search").classList.remove("disabled")
         document.querySelector(".for-input-search").classList.remove("disabled")
+        document.querySelector(".for-input-search").innerHTML = "add more"
         document.querySelector(".compare-btn").disabled = false;
+
 
     }
 
@@ -181,7 +190,7 @@ let appendSerch = (filtered) => {
         htmlTemlate += `
                 <tr>
                     <td onclick="addToCompare(this)" >${iterator.artist}</td>
-                    <td ><span class="item-type">artist</span></td>
+                    <td><span class="item-type">artist</span></td>
                     <td onclick="addToCompare(this)"><i  class="far fa-plus-square"></i></td>
                 </tr>`
     }
@@ -194,17 +203,16 @@ const search = () => {
     inputfield.addEventListener("keyup", () => {
         let filteredResults = [];
         // go through the og database and check if the input matches de database
-        for (const iti of dataStorage) {
+        for (let iti of dataStorage) {
             // convert to lowercase and no special characters 
-            let artistID = iti.artist.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-            //   let carBrand = iti.initials.brand.toLowerCase();
-            if (artistID.includes(inputfield.value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''))) {
+            let artist = iti.artist.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+
+            if (artist.includes(inputfield.value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''))) {
                 filteredResults.push(iti);
             }
-            //   else if (carBrand.includes(value.toLowerCase())) 
-            //   {
-            //     filteredResults.push(iti);
-            //   }
+
+
         }
         if (inputfield.value != "") {
             appendSerch(filteredResults)
@@ -222,7 +230,7 @@ const search = () => {
 
 
 const compare = () => {
-    let nth = ["", ""]
+
     let selectedItems = sessionStorage.getItem("toCompare") != "undefined" ? sessionStorage.getItem("toCompare") : nth
     let selectedYears = document.querySelector("#year-select").value
     sessionStorage.setItem('year', JSON.stringify(selectedYears))
@@ -337,6 +345,7 @@ let appendChart = (data) => {
             }
         });
     }
+
 
 
 }

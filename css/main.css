@@ -36,12 +36,8 @@ header .compare-bar {
   width: 100%;
   background-color: #48494c;
   left: 0px;
-  top: 120px;
+  top: 70px;
   position: absolute;
-  -webkit-box-shadow: 1px 5px 5px 0px rgba(44, 44, 44, 0.1);
-  -moz-box-shadow: 1px 5px 5px 0px rgba(44, 44, 44, 0.1);
-  box-shadow: 1px 5px 5px 0px rgba(44, 44, 44, 0.1);
-  min-height: 60px;
 }
 header .compare-bar .compare-container {
   max-width: 1150px;
@@ -53,7 +49,7 @@ header .compare-bar .compare-container .cards-container {
   clear: both;
   width: 1000px;
   min-height: 60px;
-  padding-top: 5px;
+  padding-top: 10px;
   padding-bottom: 10px;
 }
 header .compare-bar .compare-container .compare-item-card {
@@ -90,10 +86,12 @@ header .compare-bar .compare-container .compare-item-card span {
 .search-table td:first-child {
   padding-left: 7px;
   display: inline;
+  cursor: pointer;
 }
 .search-table td:nth-child(2) {
   margin-right: 10px;
   text-align: left;
+  margin-left: 5px;
 }
 .search-table td:nth-child(3) {
   display: flex;
@@ -102,7 +100,7 @@ header .compare-bar .compare-container .compare-item-card span {
   height: 30px;
   padding-top: 5px;
   margin: auto auto;
-  right: 20px;
+  right: 11px;
   position: absolute;
 }
 .search-table tr {
@@ -114,14 +112,8 @@ header .compare-bar .compare-container .compare-item-card span {
 .search-table tr:nth-child(even) {
   background-color: #dddddd;
 }
-.search-table tr:nth-child(even):hover .fa-plus-square {
-  color: #7a7a7a;
-}
 .search-table tr:nth-child(odd) {
   background-color: #e7e6e6;
-}
-.search-table tr:nth-child(odd):hover .fa-plus-square {
-  color: #7a7a7a;
 }
 .search-table .item-type {
   font-weight: lighter;
@@ -135,6 +127,7 @@ header .compare-bar .compare-container .compare-item-card span {
   margin: 0 auto;
   color: #474747;
   font-size: 20px;
+  cursor: pointer;
 }
 .fa-plus-square:hover {
   color: #7a7a7a;
@@ -157,67 +150,74 @@ header .compare-bar .compare-container .compare-item-card span {
 }
 
 #scene {
-  width: 950px;
-  margin: 0 auto 110px auto;
+  width: 850px;
+  height: 474px;
+  margin: 30px auto 110px auto;
+}
+
+.graph-container {
+  width: 100%;
+  height: 100%;
 }
 
 .details-bar {
   width: 100%;
   height: 50px;
-  z-index: 3;
-  border: 1px solid black;
+  z-index: 1;
+  border-bottom: 1px solid lightslategrey;
+  display: flex;
+  justify-content: center;
   left: 0px;
-  top: 70px;
+  top: 130px;
   position: absolute;
-  -webkit-box-shadow: 1px 5px 5px 0px rgba(44, 44, 44, 0.1);
-  -moz-box-shadow: 1px 5px 5px 0px rgba(44, 44, 44, 0.1);
-  box-shadow: 1px 5px 5px 0px rgba(44, 44, 44, 0.1);
+  -webkit-box-shadow: 1px 5px 5px 0px rgba(173, 173, 173, 0.1);
+  -moz-box-shadow: 1px 5px 5px 0px rgba(173, 173, 173, 0.1);
+  box-shadow: 1px 5px 5px 0px rgba(173, 173, 173, 0.1);
 }
 .details-bar .detail-container {
-  max-width: 1150px;
+  width: 1150px;
   height: 100%;
   margin: 0 auto;
-  display: flex;
-  align-items: baseline;
+  justify-content: center;
 }
 .details-bar .detail-container #year-select {
   width: 140px;
+  height: 30px;
+  color: #48494c;
   text-align: center;
   outline: none;
   border-radius: 2px;
-  margin: auto 50px;
+  margin: 10px 10px 0 10px;
+  cursor: pointer;
 }
 .details-bar .detail-container #year-select option {
   font-size: 16px;
+  text-align: center;
+  outline: none;
+  color: #48494c;
+  background-color: none;
 }
 
-@keyframes searchExpand {
-  0% {
-    width: 119px;
-  }
-  100% {
-    width: 400px;
-  }
+.addmr-container {
+  position: absolute;
+  display: inline-block;
+  width: 500px;
+  height: 30px;
+  margin: 10px 10px 0 10px;
 }
+
 @keyframes searchXRotate {
   0% {
     transform: rotate(45deg);
   }
   100% {
     transform: rotate(180deg);
+    color: #48494c;
   }
 }
-.addmr-container {
-  border: 1px solid black;
-  margin-left: 50px;
-  width: 500px;
-  right: 0;
-}
-
 .disabled {
-  color: red;
-  border-color: red;
-  background-color: gray;
+  background-color: #bdbdbd;
+  border: 1px solid #999999 !important;
 }
 
 .input-search {
@@ -235,9 +235,7 @@ header .compare-bar .compare-container .compare-item-card span {
 .for-input-search {
   color: #1db954;
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 120px;
+  right: 118px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
 }
@@ -250,6 +248,7 @@ header .compare-bar .compare-container .compare-item-card span {
   color: #1db954;
   position: relative;
   right: 105px;
+  top: -1px;
   width: 23px;
   height: 23px;
   font-weight: bold;
@@ -261,13 +260,14 @@ header .compare-bar .compare-container .compare-item-card span {
 }
 
 .x-rotate {
-  animation: searchXRotate 0.5s forwards;
+  animation: searchXRotate 1s forwards;
 }
 
 .input-search-to-search {
   width: 320px;
   caret-color: unset;
   color: unset;
+  border-color: #48494c;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,9 +1,16 @@
-$compare-bar-background: #48494c;
-
+// for development
 $border: 1px solid black;
 
+// fonts
 $spotify-font: "arial";
 
+// colors
 $main-color: #1db954;
-// $main-color: #a7a8ab;;
 $spotify-black: #191414;
+$compare-bar-background: #48494c;
+
+// @media
+$breakpoint: (
+  "phone": 360px,
+  "table": 768px,
+) !default;
