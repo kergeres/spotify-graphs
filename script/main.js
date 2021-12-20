@@ -1,5 +1,12 @@
 "use strict"
 
+// google analitics
+window.dataLayer = window.dataLayer || [];
+function gtag() { dataLayer.push(arguments); }
+gtag('js', new Date());
+
+gtag('config', 'G-Q02SM9WTBM');
+
 // load data from local file
 const url = "data/local_artist.json";
 
