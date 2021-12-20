@@ -4,16 +4,12 @@
   padding: 0;
 }
 
-body {
-  max-width: 1150px;
-  margin: 0 auto;
+header {
+  display: flex;
+  flex-direction: column;
 }
-
-main {
-  padding-top: 80px;
-}
-
 header nav {
+  position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -60,6 +56,7 @@ header .compare-bar .compare-container .compare-item-card {
   display: flex;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
+  transition: 0.25s;
   background-color: #1db954;
   color: #48494c;
 }
@@ -150,17 +147,6 @@ header .compare-bar .compare-container .compare-item-card span {
   transform: scale(1.05);
 }
 
-#scene {
-  width: 850px;
-  height: 474px;
-  margin: 30px auto 110px auto;
-}
-
-.graph-container {
-  width: 100%;
-  height: 100%;
-}
-
 .details-bar {
   width: 100%;
   height: 50px;
@@ -205,6 +191,26 @@ header .compare-bar .compare-container .compare-item-card span {
   width: 500px;
   height: 30px;
   margin: 10px 10px 0 10px;
+}
+
+body {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+main {
+  padding-top: 80px;
+}
+
+#scene {
+  width: 850px;
+  height: 474px;
+  margin: 30px auto 110px auto;
+}
+
+.graph-container {
+  width: 100%;
+  height: 100%;
 }
 
 @keyframes searchXRotate {
@@ -272,7 +278,7 @@ header .compare-bar .compare-container .compare-item-card span {
   border-color: #48494c;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 850px) {
   body {
     width: auto !important;
   }
@@ -288,7 +294,9 @@ header .compare-bar .compare-container .compare-item-card span {
   }
 
   .compare-bar {
-    width: auto;
+    top: 150px !important;
+    position: relative;
+    display: block;
   }
 
   .card-container {
@@ -299,9 +307,17 @@ header .compare-bar .compare-container .compare-item-card span {
     width: auto;
   }
 
+  header {
+    height: auto;
+  }
+
+  nav {
+    height: 50px !important;
+    margin-left: 10px;
+  }
+
   #scene {
     width: 100vw;
-    border: 1px solid black;
     margin: 130px auto 110px auto;
   }
 
@@ -314,7 +330,10 @@ header .compare-bar .compare-container .compare-item-card span {
 
   .details-bar {
     width: 100%;
-    height: 100px;
+    height: unset;
+    position: relative;
+    top: 0px;
+    border: none;
   }
 
   .addmr-container {
@@ -344,6 +363,11 @@ header .compare-bar .compare-container .compare-item-card span {
   .for-checkbox-search {
     top: -27px;
     right: -215px;
+  }
+
+  .for-input-search {
+    top: -24px;
+    right: -125px;
   }
 
   .graph-container {
