@@ -57,7 +57,7 @@ header {
         height: 30px;
         margin: 5px 10px 0 10px;
         display: flex;
-        font-family: Arial, Helvetica, sans-serif;
+        // font-family: Arial, Helvetica, sans-serif;
         font-weight: 700;
         transition: 0.25s;
         background-color: $main-color;
@@ -80,7 +80,7 @@ header {
   padding-right: 30px;
   text-align: start;
   width: 320px;
-  font-family: Arial, Helvetica, sans-serif;
+  // font-family: Arial, Helvetica, sans-serif;
 
   thead {
     tr:first-child {
@@ -212,6 +212,7 @@ header {
 body {
   max-width: 1150px;
   margin: 0 auto;
+  font-family: "Raleway", sans-serif;
 }
 main {
   padding-top: 80px;
@@ -260,7 +261,6 @@ main {
   color: $main-color;
   position: relative;
   right: 118px;
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
 }
 
@@ -326,10 +326,12 @@ main {
   nav {
     height: 50px !important;
     margin-left: 10px;
+    margin-top: 5px;
   }
   #scene {
     width: 100vw;
     margin: 130px auto 110px auto;
+    height: 80vh;
   }
   .detail-container {
     display: block;
@@ -367,15 +369,32 @@ main {
   }
   .for-checkbox-search {
     top: -27px;
+    right: -290px;
+  }
+  .for-input-search {
+    top: 0px;
+    right: 200px;
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 788px) {
+  .for-checkbox-search {
+    top: -27px;
     right: -215px;
   }
   .for-input-search {
     top: -24px;
     right: -125px;
   }
-  .graph-container {
-    width: 100%;
-    height: 70vh;
-    aspect-ratio: auto;
+}
+@media only screen and (max-width: 700px) {
+  .for-checkbox-search {
+    top: -27px;
+    right: -215px;
+  }
+  .for-input-search {
+    top: -24px;
+    right: -125px;
   }
 }
