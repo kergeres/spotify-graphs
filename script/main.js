@@ -340,7 +340,7 @@ let appendChart = (data) => {
                     },
                     title: {
                         display: true,
-                        text: `Listeners of ${selectedYear}`,
+                        text: `Listeners in ${selectedYear}`,
                         padding: 30,
                         fontsize: '30px',
                         font: {

@@ -276,6 +276,12 @@ main {
   border-color: #48494c;
 }
 
+@media only screen and (max-width: 1170px) {
+  header img {
+    left: 35px;
+    margin-left: 35px;
+  }
+}
 @media only screen and (max-width: 850px) {
   body {
     width: auto !important;

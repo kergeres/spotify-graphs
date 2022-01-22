@@ -39,18 +39,18 @@
         ],
         "2020": [
           {
-            "january": 102,
-            "february": 86,
-            "march": 89,
-            "aprl": 90,
-            "may": 73,
-            "jun": 107,
-            "july": 92,
-            "august": 103,
-            "september": 91,
-            "october": 70,
-            "november": 80,
-            "december": 95
+            "january": 10,
+            "february": 12,
+            "march": 9,
+            "aprl": 10,
+            "may": 10,
+            "jun": 10,
+            "july": 11,
+            "august": 8,
+            "september": 8,
+            "october": 11,
+            "november": 11,
+            "december": 9
           }
         ]
       }
@@ -278,18 +278,18 @@
         ],
         "2020": [
           {
-            "january": 80,
-            "february": 90,
-            "march": 72,
-            "aprl": 91,
-            "may": 108,
-            "jun": 88,
-            "july": 96,
-            "august": 78,
-            "september": 89,
-            "october": 80,
-            "november": 108,
-            "december": 91
+            "january": 88,
+            "february": 103,
+            "march": 81,
+            "aprl": 103,
+            "may": 109,
+            "jun": 99,
+            "july": 102,
+            "august": 79,
+            "september": 106,
+            "october": 93,
+            "november": 83,
+            "december": 103
           }
         ]
       }
@@ -517,18 +517,18 @@
         ],
         "2020": [
           {
-            "january": 109,
-            "february": 108,
-            "march": 98,
-            "aprl": 103,
-            "may": 80,
-            "jun": 94,
-            "july": 96,
-            "august": 96,
-            "september": 102,
-            "october": 81,
-            "november": 109,
-            "december": 104
+            "january": 84,
+            "february": 104,
+            "march": 93,
+            "aprl": 89,
+            "may": 88,
+            "jun": 87,
+            "july": 70,
+            "august": 106,
+            "september": 93,
+            "october": 101,
+            "november": 91,
+            "december": 92
           }
         ]
       }
@@ -756,18 +756,18 @@
         ],
         "2020": [
           {
-            "january": 92,
-            "february": 82,
-            "march": 76,
+            "january": 105,
+            "february": 92,
+            "march": 96,
             "aprl": 70,
-            "may": 108,
-            "jun": 87,
-            "july": 80,
-            "august": 88,
-            "september": 103,
-            "october": 97,
-            "november": 100,
-            "december": 71
+            "may": 98,
+            "jun": 88,
+            "july": 71,
+            "august": 89,
+            "september": 95,
+            "october": 91,
+            "november": 92,
+            "december": 92
           }
         ]
       }
@@ -995,18 +995,18 @@
         ],
         "2020": [
           {
-            "january": 88,
-            "february": 104,
-            "march": 101,
-            "aprl": 110,
-            "may": 82,
-            "jun": 93,
-            "july": 93,
-            "august": 102,
-            "september": 78,
-            "october": 106,
-            "november": 85,
-            "december": 105
+            "january": 104,
+            "february": 93,
+            "march": 88,
+            "aprl": 103,
+            "may": 87,
+            "jun": 71,
+            "july": 109,
+            "august": 85,
+            "september": 76,
+            "october": 97,
+            "november": 79,
+            "december": 106
           }
         ]
       }
@@ -1195,17 +1195,17 @@
     ]
   },
   {
-    "id": "6zerBCeTLTvR5tH4oEBRRw",
-    "artist": "Sub bass Monster",
+    "id": "1q7g5SBAxtjizS3Vcof6Y6",
+    "artist": "Carson Coma",
     "formed": "2017",
     "listeners": [
       {
         "2018": [
           {
-            "january": 99,
+            "january": 71,
             "february": 94,
             "march": 81,
-            "aprl": 70,
+            "aprl": 100,
             "may": 74,
             "jun": 98,
             "july": 76,
@@ -1221,213 +1221,1171 @@
             "january": 110,
             "february": 75,
             "march": 84,
-            "aprl": 70,
-            "may": 70,
+            "aprl": 104,
+            "may": 94,
             "jun": 79,
             "july": 71,
             "august": 94,
-            "september": 100,
+            "september": 79,
             "october": 72,
-            "november": 80,
+            "november": 91,
             "december": 110
           }
         ],
         "2020": [
           {
-            "january": 88,
-            "february": 104,
-            "march": 101,
-            "aprl": 110,
-            "may": 99,
-            "jun": 93,
-            "july": 93,
-            "august": 70,
-            "september": 78,
-            "october": 106,
-            "november": 85,
-            "december": 105
+            "january": 104,
+            "february": 93,
+            "march": 88,
+            "aprl": 103,
+            "may": 87,
+            "jun": 71,
+            "july": 109,
+            "august": 85,
+            "september": 76,
+            "october": 97,
+            "november": 79,
+            "december": 106
           }
         ]
       }
-    ],
-    "albums": [
+    ]
+  },
+  {
+    "id": "1uNFoZAHBGtllmzznpCI3s",
+    "artist": "Justin Bieber",
+    "formed": "2017",
+    "listeners": [
       {
-        "Nehézlábérzés": 2018,
-        "Ösztönlény": 2020,
-        "Zárolás feloldva": 2019
+        "2018": [
+          {
+            "january": 76653899,
+            "february": 76118575,
+            "march": 85307586,
+            "aprl": 77501067,
+            "may": 82272476,
+            "jun": 76312792,
+            "july": 77734015,
+            "august": 81854291,
+            "september": 79348993,
+            "october": 76680907,
+            "november": 74973214,
+            "december": 80031120
+          }
+        ],
+        "2019": [
+          {
+            "january": 74830642,
+            "february": 85211507,
+            "march": 80112637,
+            "aprl": 85466738,
+            "may": 78773424,
+            "jun": 82480600,
+            "july": 77166756,
+            "august": 75468945,
+            "september": 83493961,
+            "october": 76851608,
+            "november": 81924074,
+            "december": 78947056
+          }
+        ],
+        "2020": [
+          {
+            "january": 78927340,
+            "february": 86117893,
+            "march": 82975628,
+            "aprl": 83747109,
+            "may": 75251596,
+            "jun": 85622839,
+            "july": 80827623,
+            "august": 86018097,
+            "september": 80115018,
+            "october": 72839201,
+            "november": 85748064,
+            "december": 73144441
+          }
+        ]
       }
-    ],
-    "top3track": [
+    ]
+  },
+  {
+    "id": "6eUKZXaKkcviH0Ku9w2n3V",
+    "artist": "Ed Sheeran",
+    "formed": "2017",
+    "listeners": [
       {
-        "THC zrt": [
+        "2018": [
           {
-            "released": 2018,
-            "listeners": [
-              {
-                "2018": [
-                  {
-                    "january": 111,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ],
-                "2019": [
-                  {
-                    "january": 111,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ],
-                "2020": [
-                  {
-                    "january": 100,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ]
-              }
-            ]
+            "january": 72364371,
+            "february": 86542174,
+            "march": 74608735,
+            "aprl": 81376539,
+            "may": 83529128,
+            "jun": 86161813,
+            "july": 71480047,
+            "august": 74159240,
+            "september": 84653909,
+            "october": 74510171,
+            "november": 79625140,
+            "december": 75216928
           }
         ],
-        "Pesti Est": [
+        "2019": [
           {
-            "released": 2018,
-            "listeners": [
-              {
-                "2018": [
-                  {
-                    "january": 111,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ],
-                "2019": [
-                  {
-                    "january": 111,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ],
-                "2020": [
-                  {
-                    "january": 99,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ]
-              }
-            ]
+            "january": 83934606,
+            "february": 73518097,
+            "march": 77343859,
+            "aprl": 86868134,
+            "may": 78331521,
+            "jun": 83934553,
+            "july": 81472133,
+            "august": 79190385,
+            "september": 81763999,
+            "october": 81735100,
+            "november": 86483552,
+            "december": 77530270
           }
         ],
-        "Üzenetek": [
+        "2020": [
           {
-            "released": 2018,
-            "listeners": [
-              {
-                "2018": [
-                  {
-                    "january": 111,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ],
-                "2019": [
-                  {
-                    "january": 111,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ],
-                "2020": [
-                  {
-                    "january": 97,
-                    "february": 100,
-                    "march": 100,
-                    "aprl": 100,
-                    "may": 100,
-                    "jun": 100,
-                    "july": 100,
-                    "august": 100,
-                    "september": 100,
-                    "october": 100,
-                    "november": 100,
-                    "december": 100
-                  }
-                ]
-              }
-            ]
+            "january": 74624917,
+            "february": 77569106,
+            "march": 83385707,
+            "aprl": 71240640,
+            "may": 78684258,
+            "jun": 86002337,
+            "july": 82350464,
+            "august": 85974047,
+            "september": 77447693,
+            "october": 76105600,
+            "november": 81778754,
+            "december": 84905136
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "6M2wZ9GZgrQXHCFfjv46we",
+    "artist": "Dua Lipa",
+    "formed": "2017",
+    "listeners": [
+      {
+        "2018": [
+          {
+            "january": 73666609,
+            "february": 80024224,
+            "march": 72154761,
+            "aprl": 78311197,
+            "may": 75858835,
+            "jun": 82218632,
+            "july": 79355299,
+            "august": 79655784,
+            "september": 78599537,
+            "october": 84280241,
+            "november": 73049546,
+            "december": 78786318
+          }
+        ],
+        "2019": [
+          {
+            "january": 86809708,
+            "february": 82643956,
+            "march": 71260574,
+            "aprl": 73761252,
+            "may": 81199280,
+            "jun": 80182146,
+            "july": 85724092,
+            "august": 76411095,
+            "september": 82906858,
+            "october": 84195507,
+            "november": 83323180,
+            "december": 78752058
+          }
+        ],
+        "2020": [
+          {
+            "january": 76146424,
+            "february": 76379997,
+            "march": 86759904,
+            "aprl": 74422465,
+            "may": 72398196,
+            "jun": 82884797,
+            "july": 71661334,
+            "august": 71548163,
+            "september": 75217943,
+            "october": 83975283,
+            "november": 76036050,
+            "december": 74097493
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "66CXWjxzNUsdJxJ2JdwvnR",
+    "artist": "Ariana Grande",
+    "formed": "2017",
+    "listeners": [
+      {
+        "2018": [
+          {
+            "january": 71675021,
+            "february": 83555638,
+            "march": 77083956,
+            "aprl": 84998040,
+            "may": 72360205,
+            "jun": 86410208,
+            "july": 71866920,
+            "august": 76344172,
+            "september": 85421136,
+            "october": 75320125,
+            "november": 75130197,
+            "december": 77521069
+          }
+        ],
+        "2019": [
+          {
+            "january": 81784687,
+            "february": 78690079,
+            "march": 75588378,
+            "aprl": 79595546,
+            "may": 74469076,
+            "jun": 74513461,
+            "july": 85038936,
+            "august": 83177318,
+            "september": 86625543,
+            "october": 81731473,
+            "november": 78020496,
+            "december": 71586015
+          }
+        ],
+        "2020": [
+          {
+            "january": 79144548,
+            "february": 71574844,
+            "march": 76777616,
+            "aprl": 74163332,
+            "may": 72099047,
+            "jun": 80348353,
+            "july": 76144651,
+            "august": 77519145,
+            "september": 80123664,
+            "october": 75399932,
+            "november": 82389235,
+            "december": 78208432
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "4dpARuHxo51G3z768sgnrY",
+    "artist": "Adele",
+    "formed": "2017",
+    "listeners": [
+      {
+        "2018": [
+          {
+            "january": 72640571,
+            "february": 79358815,
+            "march": 74503705,
+            "aprl": 78065990,
+            "may": 84385386,
+            "jun": 76670051,
+            "july": 73330231,
+            "august": 77316379,
+            "september": 77536278,
+            "october": 80622746,
+            "november": 84851017,
+            "december": 84259972
+          }
+        ],
+        "2019": [
+          {
+            "january": 78532898,
+            "february": 81524863,
+            "march": 79919890,
+            "aprl": 72127907,
+            "may": 80363941,
+            "jun": 71894984,
+            "july": 73752168,
+            "august": 77874731,
+            "september": 80163377,
+            "october": 80449278,
+            "november": 85505107,
+            "december": 86426314
+          }
+        ],
+        "2020": [
+          {
+            "january": 83414848,
+            "february": 74016482,
+            "march": 76331376,
+            "aprl": 84034364,
+            "may": 76239574,
+            "jun": 71648564,
+            "july": 77071712,
+            "august": 83879727,
+            "september": 80645620,
+            "october": 82660972,
+            "november": 85669116,
+            "december": 72174887
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "4gzpq5DPGxSnKTe4SA8HAU",
+    "artist": "Coldplay",
+    "formed": "2017",
+    "listeners": [
+      {
+        "2018": [
+          {
+            "january": 75437189,
+            "february": 71355222,
+            "march": 85131678,
+            "aprl": 76525065,
+            "may": 76500425,
+            "jun": 72580787,
+            "july": 86966388,
+            "august": 76494813,
+            "september": 79498688,
+            "october": 75481864,
+            "november": 86739693,
+            "december": 83421643
+          }
+        ],
+        "2019": [
+          {
+            "january": 75981117,
+            "february": 74938580,
+            "march": 76300602,
+            "aprl": 73016377,
+            "may": 73203753,
+            "jun": 86552133,
+            "july": 80624475,
+            "august": 74541636,
+            "september": 81107955,
+            "october": 74618573,
+            "november": 73558616,
+            "december": 80299443
+          }
+        ],
+        "2020": [
+          {
+            "january": 78830014,
+            "february": 78281129,
+            "march": 78083352,
+            "aprl": 85776939,
+            "may": 73366691,
+            "jun": 79958584,
+            "july": 77956555,
+            "august": 78485427,
+            "september": 80962803,
+            "october": 82710749,
+            "november": 80262759,
+            "december": 84752221
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "3PhoLpVuITZKcymswpck5b",
+    "artist": "Elton John",
+    "formed": "2017",
+    "listeners": [
+      {
+        "2018": [
+          {
+            "january": 73996841,
+            "february": 79512079,
+            "march": 85909855,
+            "aprl": 74845606,
+            "may": 81333887,
+            "jun": 77987125,
+            "july": 77002169,
+            "august": 82613887,
+            "september": 83302557,
+            "october": 73657284,
+            "november": 86823648,
+            "december": 85037239
+          }
+        ],
+        "2019": [
+          {
+            "january": 81803552,
+            "february": 75300724,
+            "march": 76258075,
+            "aprl": 84049949,
+            "may": 73971934,
+            "jun": 86815391,
+            "july": 83388179,
+            "august": 85712611,
+            "september": 76664620,
+            "october": 78650870,
+            "november": 75637226,
+            "december": 79347505
+          }
+        ],
+        "2020": [
+          {
+            "january": 78111733,
+            "february": 74729346,
+            "march": 81914676,
+            "aprl": 81807205,
+            "may": 75020113,
+            "jun": 86953895,
+            "july": 78161172,
+            "august": 83440308,
+            "september": 86841251,
+            "october": 73836136,
+            "november": 77604789,
+            "december": 85514809
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5cj0lLjcoR7YOSnhnX0Po5",
+    "artist": "Doja Cat",
+    "formed": "2017",
+    "listeners": [
+      {
+        "2018": [
+          {
+            "january": 71934481,
+            "february": 78922917,
+            "march": 80984506,
+            "aprl": 86966606,
+            "may": 83960347,
+            "jun": 73501409,
+            "july": 71342542,
+            "august": 73823104,
+            "september": 71646909,
+            "october": 81007552,
+            "november": 86674786,
+            "december": 80583793
+          }
+        ],
+        "2019": [
+          {
+            "january": 82507368,
+            "february": 71818275,
+            "march": 77529479,
+            "aprl": 84851012,
+            "may": 77961692,
+            "jun": 72158114,
+            "july": 79406526,
+            "august": 84257797,
+            "september": 74751974,
+            "october": 86066360,
+            "november": 81661837,
+            "december": 85489629
+          }
+        ],
+        "2020": [
+          {
+            "january": 83362127,
+            "february": 72392938,
+            "march": 73981004,
+            "aprl": 86324349,
+            "may": 72628291,
+            "jun": 82265571,
+            "july": 75757047,
+            "august": 85731384,
+            "september": 75677465,
+            "october": 85233150,
+            "november": 82946293,
+            "december": 76599338
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "06HL4z0CvFAxyc27GXpf02",
+    "artist": "Taylor Swift",
+    "formed": "2017",
+    "listeners": [
+      {
+        "2018": [
+          {
+            "january": 84214059,
+            "february": 77449086,
+            "march": 75322364,
+            "aprl": 81389512,
+            "may": 85559852,
+            "jun": 74421866,
+            "july": 76640620,
+            "august": 85157574,
+            "september": 84196892,
+            "october": 74215248,
+            "november": 75646268,
+            "december": 81614917
+          }
+        ],
+        "2019": [
+          {
+            "january": 85550450,
+            "february": 71752843,
+            "march": 76674212,
+            "aprl": 82456750,
+            "may": 81949972,
+            "jun": 85076930,
+            "july": 80610696,
+            "august": 83683709,
+            "september": 75145471,
+            "october": 75942514,
+            "november": 75381056,
+            "december": 77518200
+          }
+        ],
+        "2020": [
+          {
+            "january": 78312696,
+            "february": 80522351,
+            "march": 72675523,
+            "aprl": 82045034,
+            "may": 83218800,
+            "jun": 85915854,
+            "july": 84074041,
+            "august": 84598806,
+            "september": 81915158,
+            "october": 82417298,
+            "november": 77279749,
+            "december": 74602008
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "0du5cEVh5yTK9QJze8zA0C",
+    "artist": "Bruno Mars",
+    "formed": "2017",
+    "listeners": [
+      {
+        "2018": [
+          {
+            "january": 83137664,
+            "february": 77605545,
+            "march": 80338104,
+            "aprl": 85048094,
+            "may": 79940456,
+            "jun": 71867398,
+            "july": 73114621,
+            "august": 83489938,
+            "september": 74830737,
+            "october": 78589739,
+            "november": 79440063,
+            "december": 72437578
+          }
+        ],
+        "2019": [
+          {
+            "january": 80737043,
+            "february": 77878292,
+            "march": 74131486,
+            "aprl": 82148429,
+            "may": 71305176,
+            "jun": 81358242,
+            "july": 80950952,
+            "august": 76737931,
+            "september": 74926166,
+            "october": 74171965,
+            "november": 81179934,
+            "december": 79061065
+          }
+        ],
+        "2020": [
+          {
+            "january": 78376534,
+            "february": 76783736,
+            "march": 84400518,
+            "aprl": 71306302,
+            "may": 82740614,
+            "jun": 78530746,
+            "july": 74369390,
+            "august": 81459445,
+            "september": 72844645,
+            "october": 78626376,
+            "november": 79839338,
+            "december": 86333763
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "53XhwfbYqKCa1cC15pYq2q",
+    "artist": "Imagine Dragons",
+    "formed": "2017",
+    "listeners": [
+      {
+        "2018": [
+          {
+            "january": 75976335,
+            "february": 72494928,
+            "march": 86256879,
+            "aprl": 77216902,
+            "may": 81713585,
+            "jun": 77596806,
+            "july": 74826599,
+            "august": 73839241,
+            "september": 78693816,
+            "october": 86071959,
+            "november": 79359983,
+            "december": 73735333
+          }
+        ],
+        "2019": [
+          {
+            "january": 77304416,
+            "february": 75329662,
+            "march": 71280826,
+            "aprl": 75021667,
+            "may": 81232482,
+            "jun": 74802610,
+            "july": 79711908,
+            "august": 84948300,
+            "september": 77029364,
+            "october": 73593358,
+            "november": 71170794,
+            "december": 82908953
+          }
+        ],
+        "2020": [
+          {
+            "january": 80381231,
+            "february": 81133934,
+            "march": 82024451,
+            "aprl": 74023206,
+            "may": 84377934,
+            "jun": 73035722,
+            "july": 83162712,
+            "august": 72473722,
+            "september": 73966087,
+            "october": 71341232,
+            "november": 83312402,
+            "december": 71684421
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "3TVXtAsR1Inumwj472S9r4",
+    "artist": "Drake",
+    "formed": "2017",
+    "listeners": [
+      {
+        "2018": [
+          {
+            "january": 80027849,
+            "february": 72183960,
+            "march": 81629991,
+            "aprl": 85501829,
+            "may": 85005007,
+            "jun": 78584444,
+            "july": 73738498,
+            "august": 80945331,
+            "september": 78489980,
+            "october": 83224783,
+            "november": 76545598,
+            "december": 84734585
+          }
+        ],
+        "2019": [
+          {
+            "january": 84958320,
+            "february": 75304233,
+            "march": 80669015,
+            "aprl": 77770261,
+            "may": 85019539,
+            "jun": 82808859,
+            "july": 84978697,
+            "august": 77333154,
+            "september": 77153928,
+            "october": 83760774,
+            "november": 74257508,
+            "december": 82754675
+          }
+        ],
+        "2020": [
+          {
+            "january": 75555023,
+            "february": 72280968,
+            "march": 77807045,
+            "aprl": 83211812,
+            "may": 79295830,
+            "jun": 81893380,
+            "july": 83852887,
+            "august": 78871826,
+            "september": 86054741,
+            "october": 75651828,
+            "november": 82403316,
+            "december": 82056355
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "7jVv8c5Fj3E9VhNjxT4snq",
+    "artist": "Lil Nas X",
+    "formed": "2017",
+    "listeners": [
+      {
+        "2018": [
+          {
+            "january": 82070365,
+            "february": 77765279,
+            "march": 81306664,
+            "aprl": 78565289,
+            "may": 80562307,
+            "jun": 71387185,
+            "july": 86670603,
+            "august": 77659426,
+            "september": 82827053,
+            "october": 85061375,
+            "november": 76876659,
+            "december": 86056553
+          }
+        ],
+        "2019": [
+          {
+            "january": 75861439,
+            "february": 84998602,
+            "march": 72342309,
+            "aprl": 79657005,
+            "may": 74559097,
+            "jun": 84726024,
+            "july": 82341082,
+            "august": 72599091,
+            "september": 72264682,
+            "october": 78963467,
+            "november": 84651816,
+            "december": 77894633
+          }
+        ],
+        "2020": [
+          {
+            "january": 72450020,
+            "february": 81109768,
+            "march": 73546733,
+            "aprl": 81652649,
+            "may": 74871972,
+            "jun": 80944912,
+            "july": 77138898,
+            "august": 77725741,
+            "september": 75878557,
+            "october": 83621852,
+            "november": 74227523,
+            "december": 86317028
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "1vyhD5VmyZ7KMfW5gqLgo5",
+    "artist": "J Balvin",
+    "formed": "2017",
+    "listeners": [
+      {
+        "2018": [
+          {
+            "january": 77800979,
+            "february": 72840130,
+            "march": 83637174,
+            "aprl": 83191059,
+            "may": 71143726,
+            "jun": 84375677,
+            "july": 76321278,
+            "august": 78877576,
+            "september": 71480821,
+            "october": 74149370,
+            "november": 71038517,
+            "december": 73007255
+          }
+        ],
+        "2019": [
+          {
+            "january": 79020100,
+            "february": 77957586,
+            "march": 74465093,
+            "aprl": 72291891,
+            "may": 85970117,
+            "jun": 75124095,
+            "july": 79874113,
+            "august": 82160368,
+            "september": 77860712,
+            "october": 79600058,
+            "november": 78266263,
+            "december": 71303504
+          }
+        ],
+        "2020": [
+          {
+            "january": 76312187,
+            "february": 79920059,
+            "march": 74182168,
+            "aprl": 85114678,
+            "may": 82044739,
+            "jun": 79936134,
+            "july": 78076878,
+            "august": 82740780,
+            "september": 86188465,
+            "october": 80345628,
+            "november": 86705931,
+            "december": 71141590
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "1Cs0zKBU1kc0i8ypK3B9ai",
+    "artist": "David Guetta",
+    "formed": "2017",
+    "listeners": [
+      {
+        "2018": [
+          {
+            "january": 83625439,
+            "february": 79030975,
+            "march": 79132588,
+            "aprl": 83509357,
+            "may": 85478356,
+            "jun": 78364477,
+            "july": 71395531,
+            "august": 76834417,
+            "september": 74460720,
+            "october": 71657959,
+            "november": 72108854,
+            "december": 80359278
+          }
+        ],
+        "2019": [
+          {
+            "january": 84194151,
+            "february": 76503335,
+            "march": 84377676,
+            "aprl": 73419949,
+            "may": 74629668,
+            "jun": 83669313,
+            "july": 76799989,
+            "august": 80879285,
+            "september": 77399106,
+            "october": 85123062,
+            "november": 73904239,
+            "december": 78406575
+          }
+        ],
+        "2020": [
+          {
+            "january": 82968402,
+            "february": 73748015,
+            "march": 72122435,
+            "aprl": 84503732,
+            "may": 74389640,
+            "jun": 73374311,
+            "july": 85728538,
+            "august": 79945162,
+            "september": 82593527,
+            "october": 77987971,
+            "november": 85853113,
+            "december": 78368629
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "0Hir00e5sSBEH8WqOmvi8h",
+    "artist": "Halott Pénz",
+    "formed": "2017",
+    "listeners": [
+      {
+        "2018": [
+          {
+            "january": 71,
+            "february": 94,
+            "march": 81,
+            "aprl": 100,
+            "may": 74,
+            "jun": 98,
+            "july": 76,
+            "august": 90,
+            "september": 88,
+            "october": 96,
+            "november": 89,
+            "december": 109
+          }
+        ],
+        "2019": [
+          {
+            "january": 110,
+            "february": 75,
+            "march": 84,
+            "aprl": 104,
+            "may": 94,
+            "jun": 79,
+            "july": 71,
+            "august": 94,
+            "september": 79,
+            "october": 72,
+            "november": 91,
+            "december": 110
+          }
+        ],
+        "2020": [
+          {
+            "january": 104,
+            "february": 93,
+            "march": 88,
+            "aprl": 103,
+            "may": 87,
+            "jun": 71,
+            "july": 109,
+            "august": 85,
+            "september": 76,
+            "october": 97,
+            "november": 79,
+            "december": 106
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "4URlJ0EofF5gUvCGDtxr3m",
+    "artist": "Wellhello",
+    "formed": "2017",
+    "listeners": [
+      {
+        "2018": [
+          {
+            "january": 71,
+            "february": 94,
+            "march": 81,
+            "aprl": 100,
+            "may": 74,
+            "jun": 98,
+            "july": 76,
+            "august": 90,
+            "september": 88,
+            "october": 96,
+            "november": 89,
+            "december": 109
+          }
+        ],
+        "2019": [
+          {
+            "january": 110,
+            "february": 75,
+            "march": 84,
+            "aprl": 104,
+            "may": 94,
+            "jun": 79,
+            "july": 71,
+            "august": 94,
+            "september": 79,
+            "october": 72,
+            "november": 91,
+            "december": 110
+          }
+        ],
+        "2020": [
+          {
+            "january": 104,
+            "february": 93,
+            "march": 88,
+            "aprl": 103,
+            "may": 87,
+            "jun": 71,
+            "july": 109,
+            "august": 85,
+            "september": 76,
+            "october": 97,
+            "november": 79,
+            "december": 106
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "4aI0S3yTT8xy6R0r27q5La",
+    "artist": "Molnár Ferenc Caramel",
+    "formed": "2017",
+    "listeners": [
+      {
+        "2018": [
+          {
+            "january": 71,
+            "february": 94,
+            "march": 81,
+            "aprl": 100,
+            "may": 74,
+            "jun": 98,
+            "july": 76,
+            "august": 90,
+            "september": 88,
+            "october": 96,
+            "november": 89,
+            "december": 109
+          }
+        ],
+        "2019": [
+          {
+            "january": 110,
+            "february": 75,
+            "march": 84,
+            "aprl": 104,
+            "may": 94,
+            "jun": 79,
+            "july": 71,
+            "august": 94,
+            "september": 79,
+            "october": 72,
+            "november": 91,
+            "december": 110
+          }
+        ],
+        "2020": [
+          {
+            "january": 104,
+            "february": 93,
+            "march": 88,
+            "aprl": 103,
+            "may": 87,
+            "jun": 71,
+            "july": 109,
+            "august": 85,
+            "september": 76,
+            "october": 97,
+            "november": 79,
+            "december": 106
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "6wY9OORuD6E5gTJ7yMinoW",
+    "artist": "Rúzsa Magdi",
+    "formed": "2017",
+    "listeners": [
+      {
+        "2018": [
+          {
+            "january": 71,
+            "february": 94,
+            "march": 81,
+            "aprl": 100,
+            "may": 74,
+            "jun": 98,
+            "july": 76,
+            "august": 90,
+            "september": 88,
+            "october": 96,
+            "november": 89,
+            "december": 109
+          }
+        ],
+        "2019": [
+          {
+            "january": 110,
+            "february": 75,
+            "march": 84,
+            "aprl": 104,
+            "may": 94,
+            "jun": 79,
+            "july": 71,
+            "august": 94,
+            "september": 79,
+            "october": 72,
+            "november": 91,
+            "december": 110
+          }
+        ],
+        "2020": [
+          {
+            "january": 104,
+            "february": 93,
+            "march": 88,
+            "aprl": 103,
+            "may": 87,
+            "jun": 71,
+            "july": 109,
+            "august": 85,
+            "september": 76,
+            "october": 97,
+            "november": 79,
+            "december": 106
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "1Tz269CxkuwfLfd9sk4R0p",
+    "artist": "Ákos",
+    "formed": "2017",
+    "listeners": [
+      {
+        "2018": [
+          {
+            "january": 71,
+            "february": 94,
+            "march": 81,
+            "aprl": 100,
+            "may": 74,
+            "jun": 98,
+            "july": 76,
+            "august": 90,
+            "september": 88,
+            "october": 96,
+            "november": 89,
+            "december": 109
+          }
+        ],
+        "2019": [
+          {
+            "january": 110,
+            "february": 75,
+            "march": 84,
+            "aprl": 104,
+            "may": 94,
+            "jun": 79,
+            "july": 71,
+            "august": 94,
+            "september": 79,
+            "october": 72,
+            "november": 91,
+            "december": 110
+          }
+        ],
+        "2020": [
+          {
+            "january": 104,
+            "february": 93,
+            "march": 88,
+            "aprl": 103,
+            "may": 87,
+            "jun": 71,
+            "july": 109,
+            "august": 85,
+            "september": 76,
+            "october": 97,
+            "november": 79,
+            "december": 106
           }
         ]
       }

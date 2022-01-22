@@ -294,6 +294,14 @@ main {
   border-color: $compare-bar-background;
 }
 
+@media only screen and (max-width: 1170px) {
+  header {
+    img {
+      left: 35px;
+      margin-left: 35px;
+    }
+  }
+}
 @media only screen and (max-width: 850px) {
   body {
     // max-width: auto !important;
